@@ -794,12 +794,9 @@ nav::before {
     border-bottom: 1px solid var(--black20);
   }
 
-  .foot-list::before {
-    width: 122vw;
-  }
-
+  .foot-list::before,
   .foot-list::after {
-    display: none;
+    width: 122vw;
   }
 
   .accredit {
@@ -866,12 +863,9 @@ nav::before {
     border-bottom: 1px solid var(--black20);
   }
 
-  .foot-list::before {
-    width: 122vw;
-  }
-
+  .foot-list::before,
   .foot-list::after {
-    display: none;
+    width: 122vw;
   }
 
   .foot-con {
