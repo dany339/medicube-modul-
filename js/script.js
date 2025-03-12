@@ -19,7 +19,6 @@ $menu.on("mouseleave", function () {
 });
 
 //모바일 버전의 GNB!!
-// 모바일 메뉴 기능
 const $btnMenu = $(".btn-menu");
 const $btnClose = $(".btn-close");
 const $mobileMenu = $(".mobile-menu");
@@ -74,7 +73,7 @@ visualTl.from(".bread", { y: 50, autoAlpha: 0 }, "-=0.9");
 visualTl.from(".visual-title h2", { y: 100, autoAlpha: 0 }, "-=0.6");
 visualTl.from(".visual-title p", { y: 100, autoAlpha: 0 }, "-=0.6");
 
-/* MAIN!!!---------------------------------------------- */
+/* 슬라이드01---------------------------------------------- */
 
 // products swiper(MAIN)
 if ($(".products-con-slider").length) {
@@ -103,6 +102,8 @@ if ($(".products-con-slider").length) {
     },
   });
 }
+
+/* 슬라이드02---------------------------------------------- */
 
 if ($(".preview-swiper").length) {
   const $previewSwiper = new Swiper(".preview-swiper", {
@@ -134,6 +135,8 @@ if ($(".preview-swiper").length) {
   });
 }
 
+/* 슬라이드03---------------------------------------------- */
+
 if ($(".review-slider").length) {
   const reviewSwiper = new Swiper(".review-slider", {
     slidesPerView: 1,
@@ -164,7 +167,7 @@ if ($(".review-slider").length) {
   });
 }
 
-/* products!!!---------------------------------------------- */
+/* 제품 리스트(tab)---------------------------------------------- */
 
 // products-tab(products)
 const $productsTabMenu = $(".products-tab > li");
@@ -192,25 +195,7 @@ function productsTabAction(index) {
   $productsTabCon.eq(index).show();
 }
 
-if ($(".products-list li")) {
-  const $productsList = $(".products-list");
-  $productsList.on("click", function () {
-    $(this).toggleClass("on", 400);
-  });
-}
-
-const $productsItem = $(".products-list li");
-const $productsList = $(".products-list");
-
-$productsItem.on("click", function () {
-  $(productsList).toggleClass("on");
-
-  $(productsList).siblings().find($productsItem).stop().slideUp(duration);
-
-  // $(this).find($answer).slideDown(duration);
-  // 선택한 놈의 자손중 답변을 찾아서 슬라이드 토글
-  $(productsList).find($productsItem).stop().slideToggle(duration);
-});
+/* faq(tab)---------------------------------------------- */
 
 const $faqTabMenu = $(".faq-tab > li");
 const $faqTabCon = $(".info-wrap > ul");
@@ -237,6 +222,8 @@ function faqTabAction(index) {
   $faqTabCon.eq(index).show();
 }
 
+/* faq---------------------------------------------- */
+
 const $question = $(".info-wrap > ul > li");
 const $answer = $(".answer-wrap");
 
@@ -258,63 +245,6 @@ $question.on("click", function () {
   // 선택한 놈의 자손중 답변을 찾아서 슬라이드 토글
   $(this).find($answer).stop().slideToggle(duration);
 });
-
-/* REWARDS!!!---------------------------------------------- */
-
-// event swiper(MAIN)
-const $eventTabMenu = $(".event-tab > li");
-const $eventTabCon = $(".event-list");
-
-$eventTabCon.hide();
-$eventTabCon.eq(0).show();
-$eventTabMenu.eq(0).find("a").addClass("on");
-
-$eventTabMenu.on("click", function (e) {
-  e.preventDefault();
-
-  const eventTabIdx = $(this).index();
-
-  $eventTabMenu.find("a").removeClass("on");
-  $(this).find("a").addClass("on");
-
-  $eventTabCon.hide();
-  $eventTabCon.eq(eventTabIdx).show();
-
-  if (eventTabIdx === 0 && window.eventSwiper) {
-    window.eventSwiper.update();
-  }
-});
-
-if ($(".event-swiper").length) {
-  const $eventSwiper = new Swiper(".event-swiper", {
-    loop: true,
-    slidesPerView: "2",
-    spaceBetween: 20,
-    autoplay: {
-      delay: 1000,
-    },
-
-    breakpoints: {
-      1440: {
-        slidesPerView: 7.5,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 5,
-        spaceBetween: 20,
-      },
-      425: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-    },
-
-    pagination: {
-      el: ".event-list .swiper-pagination",
-      type: "fraction",
-    },
-  });
-}
 
 /* MAP!!!---------------------------------------------- */
 
@@ -341,8 +271,9 @@ $btnFold.on("click", function () {
   $mapSearch.toggleClass("on");
 });
 
-// TOP 버튼
 AOS.init();
+
+/* top / talk 버튼---------------------------------------------- */
 
 const btnTop = document.querySelector(".btn-top");
 const btnTalk = document.querySelector(".btn-talk");
