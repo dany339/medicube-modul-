@@ -76,9 +76,9 @@ visualTl.from(".visual-title p", { y: 100, autoAlpha: 0 }, "-=0.6");
 
 /* MAIN!!!---------------------------------------------- */
 
-// menu swiper(MAIN)
-if ($(".menu-con-slider").length) {
-  const $menuConSlider = new Swiper(".menu-con-slider", {
+// products swiper(MAIN)
+if ($(".products-con-slider").length) {
+  const $productsConSlider = new Swiper(".products-con-slider", {
     loop: true,
     slidesPerView: "auto",
     freeMode: true,
@@ -92,20 +92,20 @@ if ($(".menu-con-slider").length) {
     },
   });
 
-  const $menuTxtSlider = new Swiper(".menu-txt-slider", {
+  const $productsTxtSlider = new Swiper(".products-txt-slider", {
     loop: true,
     effect: "fade",
     autoplay: {
       delay: 5000,
     },
     thumbs: {
-      swiper: $menuConSlider,
+      swiper: $productsConSlider,
     },
   });
 }
 
-if ($(".news-swiper").length) {
-  const $eventSwiper = new Swiper(".news-swiper", {
+if ($(".preview-swiper").length) {
+  const $previewSwiper = new Swiper(".preview-swiper", {
     loop: true,
     slidesPerView: "1",
     spaceBetween: 20,
@@ -134,52 +134,82 @@ if ($(".news-swiper").length) {
   });
 }
 
-/* MENU!!!---------------------------------------------- */
+if ($(".review-slider").length) {
+  const reviewSwiper = new Swiper(".review-slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: ".review-slider-wrap .swiper-pagination",
+      type: "fraction",
+    },
 
-// menu-tab(MENU)
-const $menuTabMenu = $(".menu-tab > li");
-const $menuTabCon = $(".menu-con");
+    breakpoints: {
+      1440: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+      700: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      375: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
+}
 
-menuTabAction(0);
+/* products!!!---------------------------------------------- */
 
-$menuTabMenu.on("click", function (e) {
+// products-tab(products)
+const $productsTabMenu = $(".products-tab > li");
+const $productsTabCon = $(".products-con");
+
+productsTabAction(0);
+
+$productsTabMenu.on("click", function (e) {
   e.preventDefault();
 
-  const menuTabIdx = $(this).index();
-  console.log(menuTabIdx);
+  const productsTabIdx = $(this).index();
+  console.log(productsTabIdx);
 
-  menuTabAction(menuTabIdx);
+  productsTabAction(productsTabIdx);
 });
 
 // 공통의 동작을 함수로 정의
-function menuTabAction(index) {
+function productsTabAction(index) {
   // 탭메뉴 활성화
-  $menuTabMenu.removeClass("on");
-  $menuTabMenu.eq(index).addClass("on");
+  $productsTabMenu.removeClass("on");
+  $productsTabMenu.eq(index).addClass("on");
 
   // 인덱스에 해당하는 $tabCon 보이기
-  $menuTabCon.hide();
-  $menuTabCon.eq(index).show();
+  $productsTabCon.hide();
+  $productsTabCon.eq(index).show();
 }
 
-if ($(".menu-list li")) {
-  const $menuList = $(".menu-list");
-  $menuList.on("click", function () {
+if ($(".products-list li")) {
+  const $productsList = $(".products-list");
+  $productsList.on("click", function () {
     $(this).toggleClass("on", 400);
   });
 }
 
-const $menuItem = $(".menu-list li");
-const $menuList = $(".menu-list");
+const $productsItem = $(".products-list li");
+const $productsList = $(".products-list");
 
-$menuItem.on("click", function () {
-  $(menuList).toggleClass("on");
+$productsItem.on("click", function () {
+  $(productsList).toggleClass("on");
 
-  $(menuList).siblings().find($menuItem).stop().slideUp(duration);
+  $(productsList).siblings().find($productsItem).stop().slideUp(duration);
 
   // $(this).find($answer).slideDown(duration);
   // 선택한 놈의 자손중 답변을 찾아서 슬라이드 토글
-  $(menuList).find($menuItem).stop().slideToggle(duration);
+  $(productsList).find($productsItem).stop().slideToggle(duration);
 });
 
 const $faqTabMenu = $(".faq-tab > li");
@@ -282,33 +312,6 @@ if ($(".event-swiper").length) {
     pagination: {
       el: ".event-list .swiper-pagination",
       type: "fraction",
-    },
-  });
-}
-
-/* BUSINESS!!!---------------------------------------------- */
-if ($(".allergie-slider").length) {
-  const allergieSwiper = new Swiper(".allergie-slider", {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-    },
-    pagination: {
-      el: ".allergie-slider-wrap .swiper-pagination",
-      type: "fraction",
-    },
-
-    breakpoints: {
-      1440: {
-        slidesPerView: 6,
-        spaceBetween: 20,
-      },
-      700: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
     },
   });
 }

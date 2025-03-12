@@ -12,20 +12,16 @@
   /* justify-content: space-between; */
   justify-content: center;
   gap: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(84rem, 1fr));
 }
 
 .sns-item {
-  /* width: 85rem; */
+  width: 49%;
   margin-top: 3.125vw;
-  display: grid;
 }
 
 .sns-item figure {
   width: 100%;
   aspect-ratio: 1/0.3094;
-
   /* height: 30.7rem; */
   border-radius: 10px;
   overflow: hidden;
@@ -39,4 +35,12 @@
   margin-top: 1.0417vw;
   font-weight: 700;
   color: var(--title-color);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+}
+
+@media (max-width: 1228px) {
+  .sns-item {
+    width: 100%;
+    text-align: center;
+  }
 }
