@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+/* ------------비전02------------ */
+
 .vision {
   box-shadow: 0px 0px 30px var(--main-color20);
   padding: 5.8rem 0 14.2rem 0;
@@ -47,6 +49,19 @@
   width: 50%;
   word-break: keep-all;
 }
+
+@media (max-width: 768px) {
+  .vison-title::before,
+  .vison-title::after {
+    display: none;
+  }
+
+  .vison-title p {
+    width: 80%;
+  }
+}
+
+/* ------------250312 / 4개 / 부가설명 o------------ */
 
 .check .sec-title {
   margin-top: 12rem;
@@ -139,9 +154,74 @@
   transform: translateY(0);
 }
 
+@media (max-width: 1200px) {
+  .check-list {
+    gap: 5rem;
+  }
+}
+
+/* ------------리스트01 -1------------ */
+
+.list {
+  margin: 12rem 0;
+}
+
 .list-item {
+  /* margin-top: 1.5625vw; */
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
   flex-direction: column;
 }
+
+.list-item li {
+  width: 100%;
+  gap: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--main-color10);
+  border-radius: 10px;
+  padding: 3.4rem 3rem;
+  word-break: keep-all;
+}
+
+.list-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-item li strong {
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.list-txt p {
+  font-size: 1.8rem;
+}
+
+.list-item figure {
+  max-width: 9.3rem;
+  min-width: 9.3rem;
+  width: 9.3rem;
+  aspect-ratio: 1/1;
+  background: var(--white100);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 425px) {
+  .list-item li {
+    flex-direction: column;
+  }
+
+  .list-txt {
+    text-align: center;
+  }
+}
+
+/* ------------리스트01 -1------------ */
 
 .point {
   margin-top: 15rem;
@@ -190,12 +270,6 @@
   background-image: url(../img/store-ico1-m.png);
 }
 
-@media (max-width: 1200px) {
-  .check-list {
-    gap: 5rem;
-  }
-}
-
 @media (max-width: 880px) {
   .point {
     margin: 12rem 0;
@@ -207,15 +281,6 @@
 }
 
 @media (max-width: 768px) {
-  .vison-title::before,
-  .vison-title::after {
-    display: none;
-  }
-
-  .vison-title p {
-    width: 80%;
-  }
-
   .list-txt br {
     display: none;
   }

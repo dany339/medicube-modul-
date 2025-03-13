@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+/* ------------슬라이드01 (세로형)------------ */
+
 .slider-products-wrap {
   padding-top: 12rem;
   display: flex;
@@ -63,15 +65,6 @@
   height: 52.4rem;
 }
 
-.products-con-slider-wrap .swiper-pagination {
-  top: 105% !important;
-  color: var(--main-color);
-}
-
-.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: var(--main-color);
-}
-
 .products-card figure {
   width: 100%;
   height: 100%;
@@ -100,6 +93,43 @@
 .products-card:hover::before {
   opacity: 0;
 }
+
+@media (max-width: 1024px) {
+  .slider-products-wrap {
+    flex-wrap: wrap;
+  }
+
+  .products-con-slider {
+    height: 51.1719vw;
+  }
+
+  .products-text-card {
+    text-align: center;
+  }
+
+  .products-text-card p {
+    width: 80%;
+    margin: 0.7rem auto 0 auto;
+  }
+
+  .products-text-card .btn-more {
+    margin: 2rem auto 0 auto;
+  }
+
+  .products-card {
+    width: 95%;
+  }
+
+  .products-con-slider-wrap {
+    width: 100%;
+  }
+
+  .products-con-slider {
+    width: 100%;
+  }
+}
+
+/* ------------슬라이드02 (탭x - 정사각형-5)------------ */
 
 .preview {
   /* margin-top: 8.0208vw; */
@@ -136,6 +166,8 @@
 .preview-swiper figure:hover::after {
   opacity: 1;
 }
+
+/* ------------슬라이드03 (정사각형 - 6)------------ */
 
 .review {
   margin: 12rem 0;
@@ -208,44 +240,9 @@
 }
 
 .review-slider-wrap .swiper-pagination {
-  position: relative; /* 변경: absolute에서 relative로 */
-  bottom: -5rem; /* 필요에 따라 조정 */
+  position: relative;
+  bottom: -5rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.8rem;
-}
-
-@media (max-width: 1024px) {
-  .slider-products-wrap {
-    flex-wrap: wrap;
-  }
-
-  .products-con-slider {
-    height: 51.1719vw;
-  }
-
-  .products-text-card {
-    text-align: center;
-  }
-
-  .products-text-card p {
-    width: 80%;
-    margin: 0.7rem auto 0 auto;
-  }
-
-  .products-text-card .btn-more {
-    margin: 2rem auto 0 auto;
-  }
-
-  .products-card {
-    width: 95%;
-  }
-
-  .products-con-slider-wrap {
-    width: 100%;
-  }
-
-  .products-con-slider {
-    width: 100%;
-  }
 }
