@@ -167,7 +167,6 @@
 }
 
 .list-item {
-  /* margin-top: 1.5625vw; */
   margin-top: 3rem;
   display: flex;
   gap: 2rem;
@@ -224,7 +223,7 @@
 /* ------------리스트01 -1------------ */
 
 .point {
-  margin-top: 15rem;
+  margin-top: 12rem;
   position: relative;
   /* background: #ff5; */
   /* padding: 26rem 0 38rem 0; */
@@ -268,6 +267,11 @@
 
 .point-con a:hover::after {
   background-image: url(../img/store-ico1-m.png);
+}
+
+footer {
+  /*  footer와 point-pic의 간격 조정을 위해 footer의 마진을 0으로 재부여 */
+  margin-top: 0;
 }
 
 @media (max-width: 880px) {

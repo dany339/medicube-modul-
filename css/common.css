@@ -12,8 +12,6 @@
   --text-color: #666666;
   --white100: rgba(255, 255, 255, 1);
   --white70: rgba(255, 255, 255, 0.7);
-  --black50: rgba(0, 0, 0, 0.5);
-  --black40: rgba(0, 0, 0, 0.4);
   --black20: rgba(0, 0, 0, 0.2);
   --black10: rgba(0, 0, 0, 0.1);
 }
@@ -228,57 +226,6 @@ body {
 .btn-top.active {
   opacity: 1;
   bottom: 22.7rem;
-}
-
-/* ------------ tab-con ------------ */
-
-.tab-con {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 9.6rem;
-}
-
-.tab-item {
-  display: flex;
-  gap: 2rem;
-}
-
-.tab-item li a {
-  display: block;
-  /* width: 20.3rem; */
-  /* width: 15.3788%; */
-  width: 10.5729vw;
-  min-width: 14.4rem;
-  max-width: 20.3rem;
-  /* height: 5.5rem; */
-  aspect-ratio: 1/0.2709;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid var(--main-color);
-  border-radius: 5px;
-}
-
-.tab-item li a.on {
-  background: var(--main-color);
-  transition: 0.4s;
-  border-radius: 5px;
-}
-.tab-item li:hover {
-  background: var(--main-color);
-  transition: 0.4s;
-  border-radius: 5px;
-}
-
-.tab-item li a.on {
-  color: var(--white100);
-  transition: 0.4s;
-}
-.tab-item li:hover a {
-  color: var(--white100);
-  transition: 0.4s;
 }
 
 /* ------------ header ------------ */
@@ -613,6 +560,7 @@ nav::before {
 
 footer {
   overflow: hidden;
+  margin-top: 12rem;
 }
 
 .foot-list {

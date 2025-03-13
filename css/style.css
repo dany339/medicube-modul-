@@ -3,7 +3,7 @@
 /* ------------슬라이드01 (세로형)------------ */
 
 .slider-products-wrap {
-  padding-top: 12rem;
+  margin-top: 12rem;
   display: flex;
   gap: 2rem;
   /* border: 1px solid #000; */
@@ -132,8 +132,8 @@
 /* ------------슬라이드02 (탭x - 정사각형-5)------------ */
 
 .preview {
-  /* margin-top: 8.0208vw; */
-  margin: 15.4rem 0 6.25vw 0;
+  /* margin-top: 6.25vw; */
+  margin-top: 12rem;
 }
 
 .preview-list {

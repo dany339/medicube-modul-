@@ -2,10 +2,6 @@
 
 /* ------------제품 리스트01 (부제목o)------------ */
 
-.products {
-  margin-bottom: 17.5rem;
-}
-
 .products-title {
   margin: 0 auto;
   text-align: center;
@@ -22,13 +18,8 @@
   color: var(--title-color);
 }
 
-.products-title p {
-  margin-top: 6%;
-}
-
 .products-tab {
   display: flex;
-  /* gap: 2.5rem; */
   gap: 1.8939%;
   justify-content: center;
   margin-top: 6rem;
@@ -51,7 +42,6 @@
 .products-tab a,
 .products-tab li.on:hover a {
   font-size: 1.9rem;
-  font-weight: 700;
   color: var(--main-color);
 }
 
@@ -120,7 +110,7 @@
 /* ------------FAQ01------------ */
 
 .faq {
-  margin: 12rem 0 6.25vw 0;
+  margin-top: 12rem;
 }
 
 .faq-wrap {
@@ -247,7 +237,7 @@
 /* ------------리스트02------------ */
 
 .list {
-  margin: 12rem 0;
+  margin-top: 12rem;
 }
 
 .list-item {

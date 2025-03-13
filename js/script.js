@@ -1,6 +1,4 @@
-/* 공통!!!---------------------------------------------- */
-
-// GNB
+/* GNB ---------------------------------------------- */
 const $header = $("header");
 const $menu = $(".gnb > li");
 const $submenu = $(".submenu");
@@ -18,7 +16,7 @@ $menu.on("mouseleave", function () {
   $submenu.stop().slideUp(duration);
 });
 
-//모바일 버전의 GNB!!
+/* GNB(mobile) ---------------------------------------------- */
 const $btnMenu = $(".btn-menu");
 const $btnClose = $(".btn-close");
 const $mobileMenu = $(".mobile-menu");
@@ -34,14 +32,12 @@ $btnClose.on("click", function () {
   $("body").css("overflow", "auto"); // 스크롤 복구
 });
 
-// 모바일 서브메뉴 토글
 $mobileGnb.on("click", function (e) {
   e.preventDefault();
   $(this).next(".mobile-submenu").slideToggle(300);
   $(this).parent().siblings().find(".mobile-submenu").slideUp(300);
 });
 
-// 모바일 메뉴 외부 영역 클릭시 닫기
 $(document).on("click", function (e) {
   if (!$(e.target).closest(".mobile-menu, .btn-menu").length) {
     $mobileMenu.removeClass("on");
@@ -49,9 +45,10 @@ $(document).on("click", function (e) {
   }
 });
 
-// 비주얼 이미지 나타나기~
+/* visual ---------------------------------------------- */
 gsap.registerPlugin(ScrollTrigger);
 
+// visual 영역 이미지
 const mainPic = $(".main-pic");
 const mainTitle = $(".main-title");
 const mainTl = gsap.timeline({
@@ -61,7 +58,7 @@ const mainTl = gsap.timeline({
 mainTl.from(mainPic, { scale: 0.3 });
 mainTl.from(mainTitle, { y: 200, autoAlpha: 0 }, "-=0.3");
 
-// 1. visual 영역 애니메이션
+// visual 영역 애니메이션
 const visualPic = $(".visual-pic").get(0);
 
 const visualTl = gsap.timeline({
@@ -73,9 +70,26 @@ visualTl.from(".bread", { y: 50, autoAlpha: 0 }, "-=0.9");
 visualTl.from(".visual-title h2", { y: 100, autoAlpha: 0 }, "-=0.6");
 visualTl.from(".visual-title p", { y: 100, autoAlpha: 0 }, "-=0.6");
 
-/* 슬라이드01---------------------------------------------- */
+/* top / talk 버튼---------------------------------------------- */
 
-// products swiper(MAIN)
+const btnTop = document.querySelector(".btn-top");
+const btnTalk = document.querySelector(".btn-talk");
+const html = document.documentElement;
+const htmlPos = html.scrollHeight / 2;
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY;
+
+  if (scrollTop >= htmlPos) {
+    btnTop.classList.add("active");
+    btnTalk.classList.add("active");
+  } else {
+    btnTop.classList.remove("active");
+    btnTalk.classList.remove("active");
+  }
+});
+
+/* 슬라이드01 ---------------------------------------------- */
 if ($(".products-con-slider").length) {
   const $productsConSlider = new Swiper(".products-con-slider", {
     loop: true,
@@ -103,8 +117,7 @@ if ($(".products-con-slider").length) {
   });
 }
 
-/* 슬라이드02---------------------------------------------- */
-
+/* 슬라이드02 ---------------------------------------------- */
 if ($(".preview-swiper").length) {
   const $previewSwiper = new Swiper(".preview-swiper", {
     loop: true,
@@ -135,7 +148,7 @@ if ($(".preview-swiper").length) {
   });
 }
 
-/* 슬라이드03---------------------------------------------- */
+/* 슬라이드03 ---------------------------------------------- */
 
 if ($(".review-slider").length) {
   const reviewSwiper = new Swiper(".review-slider", {
@@ -167,9 +180,7 @@ if ($(".review-slider").length) {
   });
 }
 
-/* 제품 리스트(tab)---------------------------------------------- */
-
-// products-tab(products)
+/* 제품 목록 -카테고리 ---------------------------------------------- */
 const $productsTabMenu = $(".products-tab > li");
 const $productsTabCon = $(".products-con");
 
@@ -184,19 +195,15 @@ $productsTabMenu.on("click", function (e) {
   productsTabAction(productsTabIdx);
 });
 
-// 공통의 동작을 함수로 정의
 function productsTabAction(index) {
-  // 탭메뉴 활성화
   $productsTabMenu.removeClass("on");
   $productsTabMenu.eq(index).addClass("on");
 
-  // 인덱스에 해당하는 $tabCon 보이기
   $productsTabCon.hide();
   $productsTabCon.eq(index).show();
 }
 
-/* faq(tab)---------------------------------------------- */
-
+/* 질문 목록(faq) - 카테고리 ---------------------------------------------- */
 const $faqTabMenu = $(".faq-tab > li");
 const $faqTabCon = $(".info-wrap > ul");
 
@@ -222,8 +229,7 @@ function faqTabAction(index) {
   $faqTabCon.eq(index).show();
 }
 
-/* faq---------------------------------------------- */
-
+/* 질문 목록(faq) ---------------------------------------------- */
 const $question = $(".info-wrap > ul > li");
 const $answer = $(".answer-wrap");
 
@@ -246,19 +252,16 @@ $question.on("click", function () {
   $(this).find($answer).stop().slideToggle(duration);
 });
 
-/* MAP!!!---------------------------------------------- */
-
+/* 지도 ---------------------------------------------- */
 const $mapSearch = $(".map-search");
 const $btnFold = $(".btn-fold");
 
-// 페이지 로드 시 초기 상태 설정
 $(document).ready(function () {
   if (window.innerWidth <= 1024) {
     $mapSearch.addClass("on");
   }
 });
 
-// 리사이즈 이벤트 처리
 $(window).on("resize", function () {
   if (window.innerWidth <= 1024) {
     $mapSearch.addClass("on");
@@ -272,22 +275,3 @@ $btnFold.on("click", function () {
 });
 
 AOS.init();
-
-/* top / talk 버튼---------------------------------------------- */
-
-const btnTop = document.querySelector(".btn-top");
-const btnTalk = document.querySelector(".btn-talk");
-const html = document.documentElement;
-const htmlPos = html.scrollHeight / 2;
-
-window.addEventListener("scroll", function () {
-  let scrollTop = window.scrollY;
-
-  if (scrollTop >= htmlPos) {
-    btnTop.classList.add("active");
-    btnTalk.classList.add("active");
-  } else {
-    btnTop.classList.remove("active");
-    btnTalk.classList.remove("active");
-  }
-});
