@@ -35,7 +35,7 @@
 
 .map-search > strong {
   display: block;
-  margin-top: 5rem;
+  margin-top: var(--m-l);
 }
 
 .btn-fold {

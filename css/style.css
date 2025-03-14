@@ -3,7 +3,7 @@
 /* ------------ 슬라이드01 - 이미지(세로형) ------------ */
 
 .slider-products-wrap {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
   display: flex;
   gap: 2rem;
 }
@@ -35,7 +35,7 @@
   font-weight: 700;
   font-size: var(--fz-m);
   color: var(--main-color);
-  margin-top: 2rem;
+  margin-top: var(--m-xs);
 }
 
 .products-text-card h3 {
@@ -44,17 +44,17 @@
   font-weight: 700;
   color: var(--title-color);
   word-break: keep-all;
-  margin-top: 2.8rem;
+  margin-top: var(--m-s);
 }
 
 .products-text-card p {
   width: 30vw;
-  margin-top: 1.5rem;
+  margin-top: var(--m-xs);
   word-break: keep-all;
 }
 
 .products-text-card .btn-more {
-  margin-top: 6rem;
+  margin-top: var(--m-l);
 }
 
 .products-con-slider {
@@ -98,11 +98,11 @@
 
   .products-text-card p {
     width: 80%;
-    margin: 0.7rem auto 0 auto;
+    margin: var(--m-xs) auto 0 auto;
   }
 
   .products-text-card .btn-more {
-    margin: 2rem auto 0 auto;
+    margin: var(--m-xs) auto 0 auto;
   }
 
   .products-con-slider-wrap {
@@ -117,16 +117,15 @@
 /* ------------ 슬라이드02 - 이미지(정사각형) ------------ */
 
 .preview {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
 }
 
 .preview-list {
-  margin-top: 2.0833vw;
+  margin-top: 3.125vw; /* var(--m-l) */
   padding: 0 2rem;
 }
 
 .preview-swiper figure {
-  margin-top: 2.6rem;
   width: 100%;
   aspect-ratio: 1/1.09259;
   border-radius: 10px;
@@ -154,7 +153,7 @@
 /* ------------ 슬라이드03 - 이미지(정사각형) ------------ */
 
 .review {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
 }
 
 .review-slider-wrap {
@@ -170,7 +169,7 @@
 }
 
 .review-slider {
-  margin-top: 4rem;
+  margin-top: var(--m-l);
 }
 
 .review-item {

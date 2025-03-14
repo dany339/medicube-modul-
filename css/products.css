@@ -7,7 +7,7 @@
   text-align: center;
   /* width: 70.5rem; */
   width: 60%;
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
   word-break: keep-all;
 }
 
@@ -22,7 +22,7 @@
   display: flex;
   gap: 1.8939%;
   justify-content: center;
-  margin-top: 6rem;
+  margin-top: var(--m-l);
   flex-shrink: 0;
   overflow: auto;
 }
@@ -63,7 +63,7 @@
 .products-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25.5rem, 1fr));
-  margin-top: 6rem;
+  margin-top: var(--m-l);
   gap: 4rem 1rem;
   justify-items: center;
   padding: 0 6.5rem;
@@ -74,7 +74,7 @@
   height: 29rem;
   border-radius: 10px;
   overflow: hidden;
-  margin: 1.0416vw 0 1.5rem 0;
+  margin-bottom: var(--m-xs);
 }
 
 .products-list li:hover img {
@@ -110,7 +110,7 @@
 /* ------------ 질문 목록 ------------ */
 
 .faq {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
 }
 
 .faq-wrap {
@@ -127,7 +127,7 @@
   font-size: var(--fz-xl);
   font-weight: 700;
   gap: 2rem;
-  margin-top: 3.125vw;
+  margin-top: var(--m-l);
   flex-shrink: 0;
   overflow-x: auto;
 }
@@ -219,7 +219,7 @@
 }
 
 .answer-wrap {
-  margin-top: 4rem;
+  margin-top: var(--m-m);
   display: none;
   font-size: var(--fz-s);
   word-break: keep-all;
@@ -233,11 +233,11 @@
 /* ------------ 목록01 - 4 ------------ */
 
 .list {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
 }
 
 .list-item {
-  margin-top: 3rem;
+  margin-top: var(--m-s);
   display: flex;
   gap: 2rem;
 }

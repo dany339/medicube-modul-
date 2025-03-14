@@ -3,11 +3,11 @@
 /* ------------ 소식 목록 ------------ */
 
 .sns {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
 }
 
 .sns-list {
-  margin-top: 2rem;
+  margin-top: var(--m-xs);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -17,7 +17,7 @@
 
 .sns-item {
   width: 49%;
-  margin-top: 3.125vw;
+  margin-top: 3.125vw; /* var(--m-l) */
 }
 
 .sns-item figure {
@@ -32,7 +32,7 @@
 }
 
 .sns-txt p {
-  margin-top: 1.0417vw;
+  margin-top: var(--m-xs);
   font-weight: 700;
   font-size: var(--fz-m);
   color: var(--title-color);

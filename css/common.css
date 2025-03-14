@@ -20,13 +20,17 @@
   /* font */
   --fz-3xl: clamp(5rem, 12.1146vw, 13.5rem);
   --fz-2xl: clamp(3.7rem, 2.7083vw, 5.2rem);
-  --fz-xl: clamp(2rem, 3.5625vw, 3rem);
+  --fz-xl: clamp(2.4rem, 4vw, 3rem);
   --fz-l: clamp(2rem, 1.1458vw, 2.2rem);
   --fz-m: clamp(1.8rem, 1.0417vw, 2rem);
   --fz-s: clamp(1.6rem, 0.99vw, 1.8rem);
 
   /* margin */
-  --margin-large: 12rem;
+  --m-xl: 12rem;
+  --m-l: 6rem;
+  --m-m: 4rem;
+  --m-s: 3rem;
+  --m-xs: 2rem;
 
   /* transition */
   --second-basic: 0.4s;
@@ -467,7 +471,7 @@ nav::before {
 }
 
 .mobile-gnb {
-  margin-top: 3rem;
+  margin-top: var(--m-s);
 }
 
 .mobile-gnb > li > a {
@@ -510,7 +514,7 @@ nav::before {
   }
 
   .mobile-sns-ico-list {
-    margin-top: 3rem;
+    margin-top: var(--m-s);
   }
 }
 
@@ -524,7 +528,7 @@ nav::before {
 
 footer {
   overflow: hidden;
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
 }
 
 .foot-list {
@@ -577,7 +581,7 @@ footer {
 .foot-con address p {
   font-size: var(--fz-s);
   color: var(--text-color);
-  margin-top: 2.6rem;
+  margin-top: var(--m-s);
   word-break: keep-all;
 }
 
@@ -613,7 +617,7 @@ footer {
   }
 
   .accredit {
-    margin-top: 5rem;
+    margin-top: var(--m-m);
   }
 }
 
@@ -666,7 +670,6 @@ footer {
   font-size: var(--fz-xl);
   font-weight: 500;
   margin: 0 auto;
-  margin-top: 1rem;
   word-break: keep-all;
 }
 
@@ -721,7 +724,7 @@ footer {
 
 .sec-title p {
   font-weight: 400;
-  margin-top: 3rem;
+  margin-top: var(--m-s);
   width: 50%;
   word-break: keep-all;
   color: var(--text-color);

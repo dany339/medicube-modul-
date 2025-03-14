@@ -8,7 +8,7 @@
 }
 
 .vison-title {
-  margin-top: 9rem;
+  margin-top: var(--m-l);
   text-align: center;
   position: relative;
 }
@@ -45,7 +45,7 @@
 }
 
 .vison-title p {
-  margin: 3rem auto 0 auto;
+  margin: var(--m-s) auto 0 auto;
   width: 50%;
   word-break: keep-all;
 }
@@ -64,11 +64,11 @@
 /* ------------ 목록02 ------------ */
 
 .check {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
 }
 
 .check-list {
-  margin: 6rem 0;
+  margin: var(--m-l) 0;
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -144,7 +144,7 @@
 }
 
 .check-list li dd {
-  margin-top: 2.3rem;
+  margin-top: var(--m-s);
   transform: translateY(350%);
   color: var(--white70);
   transition: var(--second-basic);
@@ -163,11 +163,11 @@
 /* ------------ 목록01 - 1 ------------ */
 
 .list {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
 }
 
 .list-item {
-  margin-top: 3rem;
+  margin-top: var(--m-s);
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -229,7 +229,7 @@
 /* ------------ CTA ------------ */
 
 .point {
-  margin-top: var(--margin-large);
+  margin-top: var(--m-xl);
   position: relative;
 }
 
@@ -240,11 +240,11 @@
 }
 
 .point-con p {
-  margin-top: 3rem;
+  margin-top: var(--m-s);
 }
 
 .point-con a {
-  margin-top: 6rem;
+  margin-top: var(--m-l);
   background: var(--main-color);
   color: var(--white100);
 }
@@ -279,7 +279,7 @@ footer {
 
 @media (max-width: 880px) {
   .point {
-    margin: var(--margin-large) 0;
+    margin: var(--m-xl) 0;
   }
 
   .point-pic {
