@@ -1,4 +1,4 @@
-/* GNB ---------------------------------------------- */
+/* 헤더 - gnb ---------------------------------------------- */
 const $header = $("header");
 const $menu = $(".gnb > li");
 const $submenu = $(".submenu");
@@ -16,7 +16,7 @@ $menu.on("mouseleave", function () {
   $submenu.stop().slideUp(duration);
 });
 
-/* GNB(mobile) ---------------------------------------------- */
+/* 헤더 - gnb(mobile) ---------------------------------------------- */
 const $btnMenu = $(".btn-menu");
 const $btnClose = $(".btn-close");
 const $mobileMenu = $(".mobile-menu");
@@ -69,25 +69,6 @@ visualTl.from(visualPic, { scale: 3, filter: "blur(30px)", duration: 2 });
 visualTl.from(".bread", { y: 50, autoAlpha: 0 }, "-=0.9");
 visualTl.from(".visual-title h2", { y: 100, autoAlpha: 0 }, "-=0.6");
 visualTl.from(".visual-title p", { y: 100, autoAlpha: 0 }, "-=0.6");
-
-/* top / talk 버튼---------------------------------------------- */
-
-const btnTop = document.querySelector(".btn-top");
-const btnTalk = document.querySelector(".btn-talk");
-const html = document.documentElement;
-const htmlPos = html.scrollHeight / 2;
-
-window.addEventListener("scroll", function () {
-  let scrollTop = window.scrollY;
-
-  if (scrollTop >= htmlPos) {
-    btnTop.classList.add("active");
-    btnTalk.classList.add("active");
-  } else {
-    btnTop.classList.remove("active");
-    btnTalk.classList.remove("active");
-  }
-});
 
 /* 슬라이드01 ---------------------------------------------- */
 if ($(".products-con-slider").length) {
@@ -204,7 +185,7 @@ function productsTabAction(index) {
   $productsTabCon.eq(index).show();
 }
 
-/* 질문 목록(faq) - 카테고리 ---------------------------------------------- */
+/* 질문 목록 - 카테고리 ---------------------------------------------- */
 const $faqTabMenu = $(".faq-tab > li");
 const $faqTabCon = $(".info-wrap > ul");
 
@@ -219,13 +200,10 @@ $faqTabMenu.on("click", function (e) {
   faqTabAction(faqTabIdx);
 });
 
-// 공통의 동작을 함수로 정의
 function faqTabAction(index) {
-  // 탭메뉴 활성화
   $faqTabMenu.removeClass("on");
   $faqTabMenu.eq(index).addClass("on");
 
-  // 인덱스에 해당하는 $tabCon 보이기
   $faqTabCon.hide();
   $faqTabCon.eq(index).show();
 }
@@ -235,8 +213,6 @@ const $question = $(".info-wrap > ul > li");
 const $answer = $(".answer-wrap");
 
 $question.on("click", function () {
-  // 🚩 $(this)로 구별, siblings()
-
   // 선택한 놈을 기준으로, 다른 놈들은 on클래스 삭제
   $(this).siblings().removeClass("on");
 
@@ -276,3 +252,22 @@ $btnFold.on("click", function () {
 });
 
 AOS.init();
+
+/* top / talk 버튼---------------------------------------------- */
+
+const btnTop = document.querySelector(".btn-top");
+const btnTalk = document.querySelector(".btn-talk");
+const html = document.documentElement;
+const htmlPos = html.scrollHeight / 2;
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY;
+
+  if (scrollTop >= htmlPos) {
+    btnTop.classList.add("active");
+    btnTalk.classList.add("active");
+  } else {
+    btnTop.classList.remove("active");
+    btnTalk.classList.remove("active");
+  }
+});

@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-/* ------------비전02------------ */
+/* ------------ 비전 ------------ */
 
 .vision {
   box-shadow: 0px 0px 30px var(--main-color20);
@@ -61,7 +61,7 @@
   }
 }
 
-/* ------------250312 / 4개 / 부가설명 o------------ */
+/* ------------ 목록02 ------------ */
 
 .check {
   margin-top: var(--margin-large);
@@ -160,7 +160,7 @@
   }
 }
 
-/* ------------리스트01 -1------------ */
+/* ------------ 목록01 - 1 ------------ */
 
 .list {
   margin-top: var(--margin-large);
@@ -185,19 +185,9 @@
   word-break: keep-all;
 }
 
-.list-txt {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
 .list-item li strong {
   font-weight: 600;
   color: var(--main-color);
-}
-
-.list-txt p {
-  font-size: var(--fz-s);
 }
 
 .list-item figure {
@@ -210,6 +200,22 @@
   overflow: hidden;
 }
 
+.list-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-txt p {
+  font-size: var(--fz-s);
+}
+
+@media (max-width: 768px) {
+  .list-txt br {
+    display: none;
+  }
+}
+
 @media (max-width: 425px) {
   .list-item li {
     flex-direction: column;
@@ -220,7 +226,7 @@
   }
 }
 
-/* ------------리스트01 -1------------ */
+/* ------------ CTA ------------ */
 
 .point {
   margin-top: var(--margin-large);
@@ -233,24 +239,12 @@
   gap: 4rem;
 }
 
-.point-pic {
-  width: 30.2083vw;
-  min-width: 34.5rem;
-  aspect-ratio: 1/0.931;
-  overflow: hidden;
-}
-
-.point-con {
-  display: flex;
-  margin-top: 6rem;
-  gap: 2rem;
-}
-
-.point-con .btn-more-item {
-  background: var(--white100);
+.point-con p {
+  margin-top: 3rem;
 }
 
 .point-con a {
+  margin-top: 6rem;
   background: var(--main-color);
   color: var(--white100);
 }
@@ -267,6 +261,17 @@
   background-image: url(../img/store-ico1-m.png);
 }
 
+.point-con .btn-more-item {
+  background: var(--white100);
+}
+
+.point-pic {
+  width: 30.2083vw;
+  min-width: 34.5rem;
+  aspect-ratio: 1/0.931;
+  overflow: hidden;
+}
+
 footer {
   /*  footer와 point-pic의 간격 조정을 위해 footer의 마진을 0으로 재부여 */
   margin-top: 0;
@@ -278,12 +283,6 @@ footer {
   }
 
   .point-pic {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .list-txt br {
     display: none;
   }
 }

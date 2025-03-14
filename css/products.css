@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-/* ------------제품 리스트01 (부제목o)------------ */
+/* ------------ 제품 목록 ------------ */
 
 .products-title {
   margin: 0 auto;
@@ -107,7 +107,7 @@
   }
 }
 
-/* ------------FAQ01------------ */
+/* ------------ 질문 목록 ------------ */
 
 .faq {
   margin-top: var(--margin-large);
@@ -230,14 +230,13 @@
   gap: 3rem;
 }
 
-/* ------------목록01 - 4------------ */
+/* ------------ 목록01 - 4 ------------ */
 
 .list {
   margin-top: var(--margin-large);
 }
 
 .list-item {
-  /* margin-top: 1.5625vw; */
   margin-top: 3rem;
   display: flex;
   gap: 2rem;

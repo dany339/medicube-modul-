@@ -1,12 +1,12 @@
 @charset 'utf-8';
 
-/* ------------sns------------ */
+/* ------------ 소식 목록 ------------ */
 
 .sns {
   margin-top: var(--margin-large);
 }
 
-.sns .sns-list {
+.sns-list {
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
