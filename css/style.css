@@ -3,10 +3,9 @@
 /* ------------슬라이드01 (세로형)------------ */
 
 .slider-products-wrap {
-  margin-top: 12rem;
+  margin-top: var(--margin-large);
   display: flex;
   gap: 2rem;
-  /* border: 1px solid #000; */
 }
 
 .products-card {
@@ -16,8 +15,6 @@
   aspect-ratio: 1/4.2272;
   border-radius: 10px;
   overflow: hidden;
-  /* margin: 0 1rem; */
-  margin-right: 2rem;
   word-break: keep-all;
 }
 
@@ -36,14 +33,14 @@
 
 .products-text-card strong {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: var(--fz-m);
   color: var(--main-color);
   margin-top: 2rem;
 }
 
 .products-text-card h3 {
-  font: 9rem/1.1 "pretendard", sans-serif;
-  font-size: clamp(5rem, 5vw, 9rem);
+  font-size: clamp(5rem, 5vw, 9rem); /* 여기 어떻게 할지 좀 고민해보기~ */
+  line-height: 1.1;
   font-weight: 700;
   color: var(--title-color);
   word-break: keep-all;
@@ -72,7 +69,7 @@
 
 .products-card .products-name {
   opacity: 0;
-  transition: 0.4s;
+  transition: var(--second-basic);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -90,17 +87,9 @@
   opacity: 1;
 }
 
-.products-card:hover::before {
-  opacity: 0;
-}
-
 @media (max-width: 1024px) {
   .slider-products-wrap {
     flex-wrap: wrap;
-  }
-
-  .products-con-slider {
-    height: 51.1719vw;
   }
 
   .products-text-card {
@@ -116,10 +105,6 @@
     margin: 2rem auto 0 auto;
   }
 
-  .products-card {
-    width: 95%;
-  }
-
   .products-con-slider-wrap {
     width: 100%;
   }
@@ -132,8 +117,7 @@
 /* ------------슬라이드02 (탭x - 정사각형-5)------------ */
 
 .preview {
-  /* margin-top: 6.25vw; */
-  margin-top: 12rem;
+  margin-top: var(--margin-large);
 }
 
 .preview-list {
@@ -170,7 +154,7 @@
 /* ------------슬라이드03 (정사각형 - 6)------------ */
 
 .review {
-  margin: 12rem 0;
+  margin-top: var(--margin-large);
 }
 
 .review-slider-wrap {
@@ -219,20 +203,13 @@
   transform: translate(-50%, -40%);
   color: var(--white100);
   text-align: center;
-  opacity: 0;
-  transition: 0.4s;
-  /* font-size: 3rem; */
-  font-size: clamp(2.4rem, 14.7783%, 3rem);
+  transition: var(--second-basic);
+  font-size: var(--fz-xl);
   font-weight: 700;
   z-index: 1;
   width: 100%;
   padding: 0 1rem;
-}
-
-.review-item i {
-  font-size: 1.8rem;
-  font-size: clamp(1.5rem, 8.867%, 1.8rem);
-  font-weight: 400;
+  opacity: 0;
 }
 
 .review-item:hover strong {
@@ -241,8 +218,7 @@
 
 .review-slider-wrap .swiper-pagination {
   position: relative;
-  bottom: -5rem;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.8rem;
+  transform: translate(-50%, 250%);
+  font-size: var(--fz-s);
 }

@@ -94,6 +94,7 @@ if ($(".products-con-slider").length) {
   const $productsConSlider = new Swiper(".products-con-slider", {
     loop: true,
     slidesPerView: "auto",
+    spaceBetween: 20,
     freeMode: true,
     watchSlidesProgress: true,
     autoplay: {

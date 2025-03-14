@@ -39,7 +39,7 @@
 
 .vison-title h4 {
   font: 8.2rem/1.1 "Poppins", sans-serif;
-  font-size: clamp(4.5rem, 6vw, 8.2rem);
+  font-size: clamp(4.5rem, 6vw, 8.2rem); /* 여기도 어떻게 할지 정해! */
   font-weight: 600;
   color: var(--main-color);
 }
@@ -63,12 +63,12 @@
 
 /* ------------250312 / 4개 / 부가설명 o------------ */
 
-.check .sec-title {
-  margin-top: 12rem;
+.check {
+  margin-top: var(--margin-large);
 }
 
 .check-list {
-  margin: 6rem 0 12rem 0;
+  margin: 6rem 0;
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -125,17 +125,17 @@
   background: var(--main-color);
 }
 
-.check-list dl {
+.check-list li dl {
   position: relative;
   z-index: 1;
 }
 
-.check-list dt {
-  font-size: 3rem;
+.check-list li dt {
+  font-size: var(--fz-xl);
   font-weight: 700;
   color: var(--white100);
   transform: translateY(110%);
-  transition: 0.5s;
+  transition: var(--second-basic);
 }
 
 .check-list li:hover dt {
@@ -143,11 +143,11 @@
   transform: translateY(0);
 }
 
-.check-list dd {
+.check-list li dd {
   margin-top: 2.3rem;
   transform: translateY(350%);
   color: var(--white70);
-  transition: 0.5s;
+  transition: var(--second-basic);
 }
 
 .check-list li:hover dd {
@@ -163,7 +163,7 @@
 /* ------------리스트01 -1------------ */
 
 .list {
-  margin: 12rem 0;
+  margin-top: var(--margin-large);
 }
 
 .list-item {
@@ -197,7 +197,7 @@
 }
 
 .list-txt p {
-  font-size: 1.8rem;
+  font-size: var(--fz-s);
 }
 
 .list-item figure {
@@ -223,10 +223,8 @@
 /* ------------리스트01 -1------------ */
 
 .point {
-  margin-top: 12rem;
+  margin-top: var(--margin-large);
   position: relative;
-  /* background: #ff5; */
-  /* padding: 26rem 0 38rem 0; */
 }
 
 .point-con {
@@ -276,7 +274,7 @@ footer {
 
 @media (max-width: 880px) {
   .point {
-    margin: 12rem 0;
+    margin: var(--margin-large) 0;
   }
 
   .point-pic {

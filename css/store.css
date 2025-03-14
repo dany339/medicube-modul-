@@ -7,7 +7,7 @@
 }
 
 .map strong {
-  font-size: 2rem;
+  font-size: var(--fz-m);
   font-weight: 700;
   color: var(--title-color);
   overflow: hidden;
@@ -26,7 +26,16 @@
   padding: 0 4rem;
   background: var(--white100);
   box-shadow: 0px -30px 30px rgba(14, 33, 27, 0.15);
-  transition: transform 0.4s ease;
+  transition: var(--second-basic) ease;
+}
+
+.map-search.on {
+  transform: translateX(100%);
+}
+
+.map-search > strong {
+  display: block;
+  margin-top: 5rem;
 }
 
 .btn-fold {
@@ -41,20 +50,9 @@
   cursor: pointer;
 }
 
-.map-search.on {
-  transform: translateX(100%);
-}
-
 .map-search.on .btn-fold {
   background-image: url(../img/arrow-m-left.png);
 }
-
-.map-search > strong {
-  display: block;
-  margin-top: 5rem;
-}
-
-/* map */
 
 .map-info > li {
   display: flex;
@@ -64,14 +62,18 @@
   border-bottom: 1px solid var(--black20);
 }
 
-.map-info dl dt {
+.map-info > li dl dt {
   font-weight: 700;
   color: var(--title-color);
 }
 
-.map-info dl dd {
-  font-size: 1.6rem;
+.map-info > li dl dd {
+  font-size: var(--fz-s);
   word-break: keep-all;
+}
+
+footer {
+  margin-top: 0;
 }
 
 @media (max-width: 1024px) {
@@ -97,21 +99,14 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 60%; /* 기본 높이 60% */
-    background: #fff;
-    padding: 2rem;
-    transition: transform 0.3s ease;
-    z-index: 10;
-  }
-
-  .map-search {
     top: auto;
     width: 100%;
-    height: 80vh;
     height: 60%;
-    transform: translateY(0);
+    padding: 2rem;
+    background: var(--white100);
     transition: transform 0.3s ease;
+    transform: translateY(0);
+    z-index: 10;
   }
 
   .map-search.on {
@@ -119,7 +114,7 @@
   }
 
   .btn-fold {
-    top: -6.8rem;
+    top: 0.2rem;
     right: 50%;
     transform: translateX(50%);
     width: 13.6rem;
@@ -129,10 +124,6 @@
 
   .map-search.on .btn-fold {
     background-image: url(../img/arrow-m-top.png);
-  }
-
-  .btn-fold {
-    top: 0.2rem;
   }
 
   footer {

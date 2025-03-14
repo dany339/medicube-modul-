@@ -4,6 +4,8 @@
 
 :root {
   font-size: 62.5%;
+
+  /* color */
   --main-color: #c8002f;
   --main-color70: rgba(200, 0, 47, 0.7);
   --main-color20: rgba(200, 0, 47, 0.2);
@@ -14,6 +16,20 @@
   --white70: rgba(255, 255, 255, 0.7);
   --black20: rgba(0, 0, 0, 0.2);
   --black10: rgba(0, 0, 0, 0.1);
+
+  /* font */
+  --fz-3xl: clamp(5rem, 12.1146vw, 13.5rem);
+  --fz-2xl: clamp(3.7rem, 2.7083vw, 5.2rem);
+  --fz-xl: clamp(2rem, 3.5625vw, 3rem);
+  --fz-l: clamp(2rem, 1.1458vw, 2.2rem);
+  --fz-m: clamp(1.8rem, 1.0417vw, 2rem);
+  --fz-s: clamp(1.6rem, 0.99vw, 1.8rem);
+
+  /* margin */
+  --margin-large: 12rem;
+
+  /* transition */
+  --second-basic: 0.4s;
 }
 
 ::selection {
@@ -33,7 +49,7 @@
 a {
   text-decoration: none;
   color: inherit;
-  font-size: 1.8rem;
+  font-size: var(--fz-s);
   font-weight: 700;
   color: var(--main-color);
 }
@@ -47,7 +63,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.4s;
+  transition: var(--second-basic);
 }
 
 iframe {
@@ -57,7 +73,7 @@ iframe {
 
 body {
   font: 2.2rem/1.4 "Pretendard", sans-serif;
-  font-size: clamp(2rem, 1.1458vw, 2.2rem);
+  font-size: var(--fz-l);
   color: var(--text-color);
   overflow-x: hidden;
 }
@@ -125,7 +141,6 @@ body {
 }
 
 .btn-more:hover::after {
-  content: "";
   background-image: url(../img/arrow-w-right.png);
 }
 
@@ -157,24 +172,24 @@ body {
   left: 75%;
   transition-delay: 0.2s;
 }
-.btn-more:hover .btn-more-con .btn-more-item:nth-child(1) {
-  transform: scale(3.2);
-}
-.btn-more:hover .btn-more-con .btn-more-item:nth-child(2) {
-  transform: scale(3.2);
-}
-.btn-more:hover .btn-more-con .btn-more-item:nth-child(3) {
-  transform: scale(3.2);
-}
+.btn-more:hover .btn-more-con .btn-more-item:nth-child(1),
+.btn-more:hover .btn-more-con .btn-more-item:nth-child(2),
+.btn-more:hover .btn-more-con .btn-more-item:nth-child(3),
 .btn-more:hover .btn-more-con .btn-more-item:nth-child(4) {
   transform: scale(3.2);
 }
 
 /* ------------ view-more ------------ */
 
+.slide-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .view-more {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .view-more::after {
@@ -184,6 +199,12 @@ body {
   height: 2.4rem;
   background: url(../img/arrow-m-right.png) no-repeat 50% 50%;
   margin-left: 1rem;
+}
+
+@media (max-width: 425px) {
+  .slide-title {
+    flex-direction: column;
+  }
 }
 
 /* ------------ btn-talk / btn-top ------------ */
@@ -246,7 +267,7 @@ header::after {
   width: 100%;
   height: 40rem;
   transition: 0.3s;
-  background: #fff;
+  background: var(--white100);
 
   z-index: 2;
 }
@@ -287,7 +308,7 @@ nav::before {
 .gnb {
   display: flex;
   font-weight: 700;
-  font-size: clamp(1.5rem, 0.99vw, 1.9rem);
+  font-size: var(--fz-s);
   color: var(--title-color);
 }
 
@@ -333,7 +354,7 @@ nav::before {
 }
 
 .submenu li a {
-  font-size: clamp(1.6rem, 0.99vw, 1.8rem);
+  font-size: var(--fz-s);
   font-weight: 500;
   word-break: keep-all;
   display: block;
@@ -470,7 +491,6 @@ nav::before {
 .mobile-gnb > li > a {
   display: block;
   padding: 1.5rem 0;
-  font-size: 2rem;
   font-weight: 700;
   color: var(--title-color);
 }
@@ -483,7 +503,6 @@ nav::before {
 .mobile-submenu a {
   display: block;
   padding: 1rem 0;
-  font-size: 1.6rem;
   color: var(--text-color);
 }
 
@@ -560,7 +579,7 @@ nav::before {
 
 footer {
   overflow: hidden;
-  margin-top: 12rem;
+  margin-top: var(--margin-large);
 }
 
 .foot-list {
@@ -598,7 +617,7 @@ footer {
 }
 
 .foot-info a {
-  font-size: 1.8rem;
+  font-size: var(--fz-s);
   font-weight: 700;
   color: var(--text-color);
 }
@@ -610,14 +629,8 @@ footer {
   align-items: center;
 }
 
-.foot-con address strong {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--title-color);
-}
-
 .foot-con address p {
-  font-size: clamp(1.4rem, 0.93vw, 1.8rem);
+  font-size: var(--fz-s);
   color: var(--text-color);
   margin-top: 2.6rem;
   word-break: keep-all;
@@ -627,11 +640,6 @@ footer {
   margin-top: 1rem;
 }
 
-.accredit {
-  display: flex;
-  gap: 1rem;
-}
-
 .accredit figure {
   width: 15rem;
   height: 3.2rem;
@@ -639,13 +647,6 @@ footer {
 
 .accredit figure img {
   object-fit: contain;
-  transform: translateY(-25%);
-}
-
-.accredit p {
-  font-size: clamp(1.2rem, 0.7vw, 1.4rem);
-  font-weight: 700;
-  color: var(--main-color);
 }
 
 @media (max-width: 1800px) {
@@ -661,21 +662,9 @@ footer {
     align-items: center;
   }
 
-  .btn-family {
-    margin-top: 3rem;
-    padding: 1rem 0 2rem 0;
-    width: 100vw;
-    border-top: 1px solid var(--black20);
-    border-bottom: 1px solid var(--black20);
-  }
-
   .foot-list::before,
   .foot-list::after {
     width: 122vw;
-  }
-
-  .accredit {
-    margin-top: 5rem;
   }
 }
 
@@ -685,32 +674,15 @@ footer {
     align-items: center;
   }
 
-  .btn-family {
-    margin-top: 3rem;
-    padding: 1rem 0 2rem 0;
-    width: 100vw;
-    border-top: 1px solid var(--black20);
-    border-bottom: 1px solid var(--black20);
-  }
-
-  .foot-list::before,
-  .foot-list::after {
-    width: 122vw;
+  .foot-info {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .foot-con {
     flex-direction: column;
     align-items: flex-start;
     padding: 5rem 3rem 7rem 3rem;
-  }
-
-  .foot-info {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .accredit {
-    margin-top: 5rem;
   }
 }
 
@@ -723,14 +695,12 @@ footer {
 }
 
 .sec-title strong {
-  font-size: 2rem;
-  font-size: clamp(1.8rem, 1.0417vw, 2rem);
+  font-size: var(--fz-m);
   color: var(--main-color);
 }
 
 .sec-title h3 {
-  font-size: 5.2rem;
-  font-size: clamp(3.7rem, 2.7083vw, 5.2rem);
+  font-size: var(--fz-2xl);
   margin-top: 1rem;
   word-break: keep-all;
 }
@@ -743,15 +713,9 @@ footer {
   color: var(--text-color);
 }
 
-@media (max-width: 768px) {
-  .sec-title p {
-    width: 100%;
-  }
-}
-
 @media (max-width: 1024px) {
   .sec-title p {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -776,16 +740,15 @@ footer {
 }
 
 .visual-title h2 {
-  font: 9.6rem/1.2 "Poppins", sans-serif;
-  font-size: clamp(5rem, 12.1146vw, 13.5rem);
+  font: 13.5rem/1.2 "Poppins", sans-serif;
+  font-size: var(--fz-3xl);
   font-weight: 700;
 }
 
 .visual-title p {
   /* width: 56rem; */
   width: 40%;
-  font-size: 3rem;
-  font-size: clamp(2rem, 3.5625vw, 3rem);
+  font-size: var(--fz-xl);
   font-weight: 500;
   margin: 0 auto;
   margin-top: 1rem;
@@ -818,7 +781,7 @@ footer {
   left: 15.625vw;
   z-index: 1;
   color: var(--white100);
-  font-size: 1.8rem;
+  font-size: var(--fz-s);
 }
 
 @media (max-width: 1024px) {
