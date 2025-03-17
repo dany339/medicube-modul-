@@ -5,22 +5,20 @@
 .products-title {
   margin: 0 auto;
   text-align: center;
-  /* width: 70.5rem; */
   width: 60%;
   margin-top: var(--m-xl);
   word-break: keep-all;
 }
 
 .products-title h3 {
-  font: 5.2rem/0.8 "Poppins", sans-serif;
+  font: var(--fz-2xl) / 0.8 "Poppins", sans-serif;
   font-weight: 700;
-  font-size: var(--fz-2xl);
   color: var(--title-color);
 }
 
 .products-tab {
   display: flex;
-  gap: 1.8939%;
+  gap: 2rem;
   justify-content: center;
   margin-top: var(--m-l);
   flex-shrink: 0;
@@ -41,7 +39,6 @@
 
 .products-tab a,
 .products-tab li.on:hover a {
-  font-size: var(--fz-s);
   color: var(--main-color);
 }
 
@@ -54,7 +51,7 @@
 }
 
 .products-tab li:hover {
-  background: #ffc8d5;
+  background: #f4c6d1;
   transition: var(--second-basic);
   color: var(--main-color);
   border: 2px solid var(--main-color);
@@ -77,7 +74,7 @@
   margin-bottom: var(--m-xs);
 }
 
-.products-list li:hover img {
+.products-list li:hover figure img {
   transform: scale(110%);
 }
 
@@ -104,6 +101,12 @@
 @media (max-width: 1440px) {
   .products-list {
     padding: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .products-tab {
+    justify-content: flex-start;
   }
 }
 
@@ -227,7 +230,7 @@
 
 .answer-con {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 /* ------------ 목록01 - 4 ------------ */
@@ -244,7 +247,7 @@
 
 .list-item li {
   width: 100%;
-  gap: 3rem;
+  gap: 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -259,7 +262,7 @@
   color: var(--main-color);
 }
 
-.list-item figure {
+.list-item li figure {
   max-width: 9.3rem;
   min-width: 9.3rem;
   width: 9.3rem;
@@ -286,10 +289,6 @@
 }
 
 @media (max-width: 425px) {
-  .list-item li {
-    flex-direction: column;
-  }
-
   .list-txt {
     text-align: center;
   }

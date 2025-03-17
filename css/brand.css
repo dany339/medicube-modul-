@@ -4,33 +4,13 @@
 
 .vision {
   box-shadow: 0px 0px 30px var(--main-color20);
-  padding: 5.8rem 0 14.2rem 0;
+  padding: 6rem 0 14.2rem 0;
 }
 
 .vison-title {
   margin-top: var(--m-l);
   text-align: center;
   position: relative;
-}
-
-.vison-title::before,
-.vison-title::after {
-  content: "";
-  width: 24.6rem;
-  height: 15rem;
-  position: absolute;
-  background: url(../img/decoration-pic1.svg) no-repeat;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.vison-title::before {
-  left: 0;
-}
-
-.vison-title::after {
-  right: 0;
-  transform: translateY(-50%) scaleX(-1);
 }
 
 .vison-title p:nth-child(1) {
@@ -51,11 +31,6 @@
 }
 
 @media (max-width: 768px) {
-  .vison-title::before,
-  .vison-title::after {
-    display: none;
-  }
-
   .vison-title p {
     width: 80%;
   }
@@ -72,8 +47,7 @@
   padding: 3rem;
   display: flex;
   justify-content: center;
-  gap: 10rem;
-  justify-content: flex-start;
+  gap: 3rem;
   flex-shrink: 0;
   overflow-x: auto;
 }
@@ -134,8 +108,8 @@
   font-size: var(--fz-xl);
   font-weight: 700;
   color: var(--white100);
-  transform: translateY(110%);
   transition: var(--second-basic);
+  transform: translateY(110%);
 }
 
 .check-list li:hover dt {
@@ -154,9 +128,9 @@
   transform: translateY(0);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1800px) {
   .check-list {
-    gap: 5rem;
+    justify-content: flex-start;
   }
 }
 
@@ -175,7 +149,7 @@
 
 .list-item li {
   width: 100%;
-  gap: 3rem;
+  gap: 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -210,12 +184,6 @@
   font-size: var(--fz-s);
 }
 
-@media (max-width: 768px) {
-  .list-txt br {
-    display: none;
-  }
-}
-
 @media (max-width: 425px) {
   .list-item li {
     flex-direction: column;
@@ -236,7 +204,6 @@
 .point-con {
   display: flex;
   justify-content: space-between;
-  gap: 4rem;
 }
 
 .point-con p {
@@ -261,6 +228,10 @@
   background-image: url(../img/store-ico1-m.png);
 }
 
+.point-con .btn-more {
+  margin-bottom: 4rem;
+}
+
 .point-con .btn-more-item {
   background: var(--white100);
 }
@@ -272,16 +243,16 @@
   overflow: hidden;
 }
 
+.point-pic img {
+  object-fit: contain;
+}
+
 footer {
   /*  footer와 point-pic의 간격 조정을 위해 footer의 마진을 0으로 재부여 */
   margin-top: 0;
 }
 
-@media (max-width: 880px) {
-  .point {
-    margin: var(--m-xl) 0;
-  }
-
+@media (max-width: 1024px) {
   .point-pic {
     display: none;
   }

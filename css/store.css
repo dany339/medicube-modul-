@@ -4,13 +4,13 @@
 
 .map {
   position: relative;
+  overflow: hidden;
 }
 
 .map strong {
   font-size: var(--fz-m);
   font-weight: 700;
   color: var(--title-color);
-  overflow: hidden;
 }
 
 .map-view iframe {

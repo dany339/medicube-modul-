@@ -8,16 +8,6 @@
   gap: 2rem;
 }
 
-.products-card {
-  position: relative;
-  width: 42.7rem;
-  /* width: 22.2396vw; */
-  aspect-ratio: 1/4.2272;
-  border-radius: 10px;
-  overflow: hidden;
-  word-break: keep-all;
-}
-
 .products-txt-slider {
   flex: 1 0 48%;
 }
@@ -27,7 +17,7 @@
 }
 
 .products-text-card {
-  background: #fff;
+  background: var(--white100);
   padding-right: 2rem;
 }
 
@@ -39,7 +29,7 @@
 }
 
 .products-text-card h3 {
-  font-size: clamp(5rem, 5vw, 9rem); /* 여기 어떻게 할지 좀 고민해보기~ */
+  font-size: clamp(5rem, 5vw, 9rem); /* 여기 어떻게 할지 고민 */
   line-height: 1.1;
   font-weight: 700;
   color: var(--title-color);
@@ -57,9 +47,13 @@
   margin-top: var(--m-l);
 }
 
-.products-con-slider {
-  width: 50vw;
-  height: 52.4rem;
+.products-card {
+  position: relative;
+  width: 42.7rem;
+  aspect-ratio: 1/1.2272;
+  border-radius: 10px;
+  overflow: hidden;
+  word-break: keep-all;
 }
 
 .products-card figure {
@@ -114,6 +108,12 @@
   }
 }
 
+@media (max-width: 425px) {
+  .products-card {
+    width: 100%;
+  }
+}
+
 /* ------------ 슬라이드02 - 이미지(정사각형) ------------ */
 
 .preview {
@@ -121,7 +121,7 @@
 }
 
 .preview-list {
-  margin-top: 3.125vw; /* var(--m-l) */
+  margin-top: var(--m-l); /* 3.125vw */
   padding: 0 2rem;
 }
 
