@@ -229,7 +229,7 @@
 }
 
 .point-con .btn-more {
-  margin-bottom: 4rem;
+  margin-bottom: var(--m-m);
 }
 
 .point-con .btn-more-item {

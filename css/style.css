@@ -2,6 +2,10 @@
 
 /* ------------ 슬라이드01 - 이미지(세로형) ------------ */
 
+.products {
+  overflow: hidden;
+}
+
 .slider-products-wrap {
   margin-top: var(--m-xl);
   display: flex;
