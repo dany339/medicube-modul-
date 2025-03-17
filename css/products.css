@@ -52,7 +52,7 @@
 
 .products-tab li:hover {
   background: #f4c6d1;
-  transition: var(--second-basic);
+  transition: var(--second-base);
   color: var(--main-color);
   border: 2px solid var(--main-color);
 }
@@ -142,12 +142,12 @@
 
 .faq-tab li:hover {
   color: var(--main-color70);
-  transition: var(--second-basic);
+  transition: var(--second-base);
 }
 
 .faq-tab li.on {
   color: var(--main-color);
-  transition: var(--second-basic);
+  transition: var(--second-base);
 }
 
 .info-wrap li {
@@ -178,7 +178,7 @@
   width: 4rem;
   aspect-ratio: 1/1;
   background: url(../img/arrow-m-bottom.png) no-repeat 50%;
-  transition: var(--second-basic);
+  transition: var(--second-base);
 }
 
 .info-wrap li.on::after {

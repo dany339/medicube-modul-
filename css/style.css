@@ -67,7 +67,7 @@
 
 .products-card .products-name {
   opacity: 0;
-  transition: var(--second-basic);
+  transition: var(--second-base);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -146,7 +146,7 @@
   width: 100%;
   height: 100%;
   background: var(--main-color70);
-  transition: 0.4s;
+  transition: var(--second-base);
   opacity: 0;
 }
 
@@ -184,7 +184,7 @@
 }
 
 .review-item::after {
-  transition: 0.4s;
+  transition: var(--second-base);
   content: "";
   position: absolute;
   top: 0;
@@ -206,7 +206,7 @@
   transform: translate(-50%, -40%);
   color: var(--white100);
   text-align: center;
-  transition: var(--second-basic);
+  transition: var(--second-base);
   font-size: var(--fz-xl);
   font-weight: 700;
   z-index: 1;

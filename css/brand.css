@@ -90,7 +90,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  transition: 0.4s;
+  transition: var(--second-base);
   background: var(--black10);
 }
 
@@ -108,7 +108,7 @@
   font-size: var(--fz-xl);
   font-weight: 700;
   color: var(--white100);
-  transition: var(--second-basic);
+  transition: var(--second-base);
   transform: translateY(110%);
 }
 
@@ -121,7 +121,7 @@
   margin-top: var(--m-s);
   transform: translateY(350%);
   color: var(--white70);
-  transition: var(--second-basic);
+  transition: var(--second-base);
 }
 
 .check-list li:hover dd {
