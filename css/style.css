@@ -18,6 +18,12 @@
 
 .products-con-slider-wrap {
   flex: 1 0 48%;
+  width: 100%;
+}
+
+.products-con-slider {
+  width: 100%;
+  overflow: visible;
 }
 
 .products-text-card {
@@ -53,7 +59,8 @@
 
 .products-card {
   position: relative;
-  width: 42.7rem;
+  width: 100%;
+  max-width: 42.7rem;
   aspect-ratio: 1/1.2272;
   border-radius: 10px;
   overflow: hidden;
@@ -90,6 +97,11 @@
     flex-wrap: wrap;
   }
 
+  .products-txt-slider,
+  .products-con-slider-wrap {
+    flex: 1 0 100%;
+  }
+
   .products-text-card {
     text-align: center;
   }
@@ -101,14 +113,6 @@
 
   .products-text-card .btn-more {
     margin: var(--m-xs) auto 0 auto;
-  }
-
-  .products-con-slider-wrap {
-    width: 100%;
-  }
-
-  .products-con-slider {
-    width: 100%;
   }
 }
 

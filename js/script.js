@@ -75,11 +75,10 @@ if ($(".products-con-slider").length) {
   const $productsConSlider = new Swiper(".products-con-slider", {
     loop: true,
     slidesPerView: "auto",
-    spaceBetween: 20,
+    spaceBetween: 21,
     freeMode: true,
-    watchSlidesProgress: true,
     autoplay: {
-      delay: 5000,
+      delay: 4000,
     },
     pagination: {
       el: ".swiper-pagination",
@@ -91,7 +90,7 @@ if ($(".products-con-slider").length) {
     loop: true,
     effect: "fade",
     autoplay: {
-      delay: 5000,
+      delay: 4000,
     },
     thumbs: {
       swiper: $productsConSlider,
