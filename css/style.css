@@ -7,7 +7,7 @@
 }
 
 .slider-products-wrap {
-  margin-top: var(--m-xl);
+  margin-top: var(--margin-xl);
   display: flex;
   gap: 2rem;
 }
@@ -17,12 +17,14 @@
 }
 
 .products-con-slider-wrap {
-  flex: 1 0 48%;
+  flex: 1 0 58%;
   width: 100%;
+  overflow: hidden;
 }
 
 .products-con-slider {
   width: 100%;
+  height: auto;
   overflow: visible;
 }
 
@@ -33,9 +35,9 @@
 
 .products-text-card strong {
   font-weight: 700;
-  font-size: var(--fz-m);
+  font-size: var(--font-m);
   color: var(--main-color);
-  margin-top: var(--m-xs);
+  margin-top: var(--margin-xs);
 }
 
 .products-text-card h3 {
@@ -44,17 +46,17 @@
   font-weight: 700;
   color: var(--title-color);
   word-break: keep-all;
-  margin-top: var(--m-s);
+  margin-top: var(--margin-s);
 }
 
 .products-text-card p {
   width: 30vw;
-  margin-top: var(--m-xs);
+  margin-top: var(--margin-xs);
   word-break: keep-all;
 }
 
 .products-text-card .btn-more {
-  margin-top: var(--m-l);
+  margin-top: var(--margin-l);
 }
 
 .products-card {
@@ -74,7 +76,7 @@
 
 .products-card .products-name {
   opacity: 0;
-  transition: var(--second-base);
+  transition: var(--trans-speed-nomal);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -107,12 +109,17 @@
   }
 
   .products-text-card p {
-    width: 80%;
-    margin: var(--m-xs) auto 0 auto;
+    width: 100%;
+    margin: var(--margin-xs) auto 0 auto;
   }
 
   .products-text-card .btn-more {
-    margin: var(--m-xs) auto 0 auto;
+    margin: var(--margin-xs) auto 0 auto;
+  }
+
+  .products-con-slider {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -125,12 +132,15 @@
 /* ------------ 슬라이드02 - 이미지(정사각형) ------------ */
 
 .preview {
-  margin-top: var(--m-xl);
+  margin-top: var(--margin-xl);
 }
 
 .preview-list {
-  margin-top: var(--m-l); /* 3.125vw */
-  padding: 0 2rem;
+  margin-top: var(--margin-l); /* 3.125vw */
+}
+
+.preview-swiper {
+  padding: 2rem 1.5rem;
 }
 
 .preview-swiper figure {
@@ -150,7 +160,7 @@
   width: 100%;
   height: 100%;
   background: var(--main-color70);
-  transition: var(--second-base);
+  transition: var(--trans-speed-nomal);
   opacity: 0;
 }
 
@@ -161,7 +171,7 @@
 /* ------------ 슬라이드03 - 이미지(정사각형) ------------ */
 
 .review {
-  margin-top: var(--m-xl);
+  margin-top: var(--margin-xl);
 }
 
 .review-slider-wrap {
@@ -177,7 +187,7 @@
 }
 
 .review-slider {
-  margin-top: var(--m-l);
+  margin-top: var(--margin-l);
 }
 
 .review-item {
@@ -188,7 +198,7 @@
 }
 
 .review-item::after {
-  transition: var(--second-base);
+  transition: var(--trans-speed-nomal);
   content: "";
   position: absolute;
   top: 0;
@@ -210,9 +220,10 @@
   transform: translate(-50%, -40%);
   color: var(--white100);
   text-align: center;
-  transition: var(--second-base);
-  font-size: var(--fz-xl);
-  font-weight: 700;
+  transition: var(--trans-speed-nomal);
+  font-size: var(--font-x);
+  font-weight: 500;
+  word-break: keep-all;
   z-index: 1;
   width: 100%;
   padding: 0 1rem;
@@ -223,9 +234,34 @@
   opacity: 1;
 }
 
-.review-slider-wrap .swiper-pagination {
+.review-item strong b {
+  font-weight: 700;
+}
+
+.review-pagination-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--margin-xs);
+}
+
+.review-prev,
+.review-next {
+  width: 4rem;
+  height: 2rem;
+  border: none;
+  background: url(../img/arrow-b-right.png) no-repeat 50%;
+  cursor: pointer;
+}
+
+.review-prev {
+  transform: scaleX(-1);
+}
+
+.review .swiper-pagination {
   position: relative;
-  left: 50%;
-  transform: translate(-50%, 250%);
-  font-size: var(--fz-s);
+  font-size: var(--font-s);
+  width: auto;
+  flex-shrink: 0;
+  transform: translateY(30%);
 }

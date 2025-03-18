@@ -8,12 +8,12 @@
 }
 
 .vison-title {
-  margin-top: var(--m-l);
+  margin-top: var(--margin-l);
   text-align: center;
   position: relative;
 }
 
-.vison-title p:nth-child(1) {
+.visual-sub-title {
   color: var(--main-color);
 }
 
@@ -25,7 +25,7 @@
 }
 
 .vison-title p {
-  margin: var(--m-s) auto 0 auto;
+  margin: var(--margin-s) auto 0 auto;
   width: 50%;
   word-break: keep-all;
 }
@@ -39,11 +39,11 @@
 /* ------------ 목록02 ------------ */
 
 .check {
-  margin-top: var(--m-xl);
+  margin-top: var(--margin-xl);
 }
 
 .check-list {
-  margin: var(--m-l) 0;
+  margin: var(--margin-l) 0;
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -90,7 +90,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  transition: var(--second-base);
+  transition: var(--trans-speed-nomal);
   background: var(--black10);
 }
 
@@ -105,10 +105,10 @@
 }
 
 .check-list li dt {
-  font-size: var(--fz-xl);
+  font-size: var(--font-xl);
   font-weight: 700;
   color: var(--white100);
-  transition: var(--second-base);
+  transition: var(--trans-speed-nomal);
   transform: translateY(110%);
 }
 
@@ -118,10 +118,10 @@
 }
 
 .check-list li dd {
-  margin-top: var(--m-s);
+  margin-top: var(--margin-s);
   transform: translateY(350%);
   color: var(--white70);
-  transition: var(--second-base);
+  transition: var(--trans-speed-nomal);
 }
 
 .check-list li:hover dd {
@@ -137,11 +137,11 @@
 /* ------------ 목록01 - 1 ------------ */
 
 .list {
-  margin-top: var(--m-xl);
+  margin-top: var(--margin-xl);
 }
 
 .list-item {
-  margin-top: var(--m-s);
+  margin-top: var(--margin-s);
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -181,7 +181,7 @@
 }
 
 .list-txt p {
-  font-size: var(--fz-s);
+  font-size: var(--font-s);
 }
 
 @media (max-width: 425px) {
@@ -197,7 +197,7 @@
 /* ------------ CTA ------------ */
 
 .point {
-  margin-top: var(--m-xl);
+  margin-top: var(--margin-xl);
   position: relative;
 }
 
@@ -207,11 +207,11 @@
 }
 
 .point-con p {
-  margin-top: var(--m-s);
+  margin-top: var(--margin-s);
 }
 
 .point-con a {
-  margin-top: var(--m-l);
+  margin-top: var(--margin-l);
   background: var(--main-color);
   color: var(--white100);
 }
@@ -229,7 +229,7 @@
 }
 
 .point-con .btn-more {
-  margin-bottom: var(--m-m);
+  margin-bottom: var(--margin-m);
 }
 
 .point-con .btn-more-item {

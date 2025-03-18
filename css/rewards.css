@@ -3,11 +3,11 @@
 /* ------------ 소식 목록 ------------ */
 
 .sns {
-  margin-top: var(--m-xl);
+  margin-top: var(--margin-xl);
 }
 
 .sns-list {
-  margin-top: var(--m-xs);
+  margin-top: var(--margin-xs);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -17,7 +17,7 @@
 
 .sns-item {
   width: 49%;
-  margin-top: 3.125vw; /* var(--m-l) */
+  margin-top: 3.125vw; /* var(--margin-l) */
 }
 
 .sns-item figure {
@@ -32,8 +32,9 @@
 }
 
 .sns-txt p {
-  margin-top: var(--m-xs);
-  font-size: var(--fz-m);
+  margin-top: var(--margin-xs);
+  /* font-size: var(--font-m); */
+  font-size: clamp(1.6rem, 3.5vw, 2rem);
   font-weight: 700;
   color: var(--title-color);
 }

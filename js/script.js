@@ -109,15 +109,11 @@ if ($(".preview-swiper").length) {
     },
 
     breakpoints: {
-      1300: {
+      1440: {
         slidesPerView: 5,
         spaceBetween: 20,
       },
-      800: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      600: {
+      660: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -142,14 +138,22 @@ if ($(".review-slider").length) {
       el: ".review-slider-wrap .swiper-pagination",
       type: "fraction",
     },
+    navigation: {
+      prevEl: ".review-prev",
+      nextEl: ".review-next",
+    },
 
     breakpoints: {
       1440: {
         slidesPerView: 6,
         spaceBetween: 20,
       },
-      700: {
+      1024: {
         slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      660: {
+        slidesPerView: 3,
         spaceBetween: 20,
       },
       375: {
@@ -257,6 +261,11 @@ const btnTop = document.querySelector(".btn-top");
 const btnTalk = document.querySelector(".btn-talk");
 const html = document.documentElement;
 const htmlPos = html.scrollHeight / 2;
+
+$(".btn-top").click(function () {
+  $("html, body").animate({ scrollTop: 0 }, 400);
+  return false;
+});
 
 window.addEventListener("scroll", function () {
   let scrollTop = window.scrollY;

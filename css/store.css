@@ -8,7 +8,7 @@
 }
 
 .map strong {
-  font-size: var(--fz-m);
+  font-size: var(--font-m);
   font-weight: 700;
   color: var(--title-color);
 }
@@ -26,7 +26,7 @@
   padding: 0 4rem;
   background: var(--white100);
   box-shadow: 0px -30px 30px rgba(14, 33, 27, 0.15);
-  transition: var(--second-base) ease;
+  transition: var(--trans-speed-nomal) ease;
 }
 
 .map-search.on {
@@ -35,7 +35,7 @@
 
 .map-search > strong {
   display: block;
-  margin-top: var(--m-l);
+  margin-top: var(--margin-l);
 }
 
 .btn-fold {
@@ -59,7 +59,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2.8rem 0 3rem 0;
-  border-bottom: 1px solid var(--black20);
+  border-bottom: 1px solid var(--black10);
 }
 
 .map-info > li dt {
@@ -68,7 +68,7 @@
 }
 
 .map-info > li dd {
-  font-size: var(--fz-s);
+  font-size: var(--font-s);
   word-break: keep-all;
 }
 
@@ -101,7 +101,7 @@ footer {
     width: 100%;
     height: 60%;
     padding: 2rem;
-    transition: var(--second-fast) ease;
+    transition: var(--trans-speed-fast) ease;
     transform: translateY(0);
     z-index: 1;
   }
