@@ -92,6 +92,9 @@ if ($(".products-con-slider").length) {
     autoplay: {
       delay: 4000,
     },
+    // controller: {
+    //   control: $productsConSlider,
+    // },
     thumbs: {
       swiper: $productsConSlider,
     },
