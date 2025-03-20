@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+/* ------------ 목록01 - 4 ------------ */
+.list-item li {
+  width: 100%;
+  gap: var(--gap-m);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--main-color10);
+  border-radius: var(--card-radius);
+  padding: 3.4rem 3rem;
+  word-break: keep-all;
+}
+
+@media (max-width: 1440px) {
+  .list-item {
+    flex-direction: column;
+  }
+}

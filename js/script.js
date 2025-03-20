@@ -24,12 +24,12 @@ const $mobileGnb = $(".mobile-gnb > li > a");
 
 $btnMenu.on("click", function () {
   $mobileMenu.addClass("on");
-  $("body").css("overflow", "hidden"); // 스크롤 방지
+  // $("body").css("overflow", "hidden"); // 스크롤 방지
 });
 
 $btnClose.on("click", function () {
   $mobileMenu.removeClass("on");
-  $("body").css("overflow", "auto"); // 스크롤 복구
+  // $("body").css("overflow", "auto"); // 스크롤 복구
 });
 
 $mobileGnb.on("click", function (e) {
@@ -41,7 +41,7 @@ $mobileGnb.on("click", function (e) {
 $(document).on("click", function (e) {
   if (!$(e.target).closest(".mobile-menu, .btn-menu").length) {
     $mobileMenu.removeClass("on");
-    $("body").css("overflow", "auto");
+    // $("body").css("overflow", "auto");
   }
 });
 
@@ -259,7 +259,6 @@ $btnFold.on("click", function () {
 AOS.init();
 
 /* top / talk 버튼---------------------------------------------- */
-
 const btnTop = document.querySelector(".btn-top");
 const btnTalk = document.querySelector(".btn-talk");
 const html = document.documentElement;

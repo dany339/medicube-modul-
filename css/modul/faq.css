@@ -1,0 +1,98 @@
+@charset 'utf-8';
+
+/* ------------ 질문 목록 ------------ */
+.faq {
+  margin-top: var(--margin-xl);
+}
+
+.faq-wrap {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--gap-m);
+}
+
+.info-wrap li {
+  border-top: 2px solid var(--black10);
+  padding: 3rem;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.info-wrap li:first-child {
+  border-top: 4px solid var(--main-color);
+}
+
+.info-wrap li:last-child {
+  border-bottom: 2px solid var(--black10);
+}
+
+.info-wrap li.on {
+  background: var(--main-color10);
+}
+
+.info-wrap li::after {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  right: 3%;
+  width: 4rem;
+  aspect-ratio: 1/1;
+  background: url(../../img/arrow-m-right.png) no-repeat 50%;
+  transform: rotate(90deg);
+  transition: var(--trans-speed-nomal);
+}
+
+.info-wrap li.on::after {
+  rotate: -180deg;
+}
+
+.faq-title {
+  display: flex;
+  gap: var(--gap-s);
+  align-items: center;
+}
+
+.faq-title i,
+.answer-wrap i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--circle-radius);
+  font-size: var(--font-l);
+  font-weight: 700;
+  color: var(--white100);
+  background: var(--main-color);
+  aspect-ratio: 1/1;
+}
+
+.answer-wrap i {
+  background: var(--black10);
+}
+
+.faq-txt {
+  width: 80%;
+}
+
+.faq-txt h4 {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--title-color);
+  padding-right: 1rem;
+  word-break: keep-all;
+}
+
+.answer-wrap {
+  margin-top: var(--margin-s);
+  display: none;
+  font-size: var(--font-s);
+  word-break: keep-all;
+}
+
+.answer-con {
+  display: flex;
+  gap: var(--gap-m);
+}

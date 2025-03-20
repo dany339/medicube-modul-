@@ -1,7 +1,15 @@
 @charset 'utf-8';
 
-/* ------------ 슬라이드01 - 이미지(세로형) ------------ */
+/* ------------cursor------------ */
+.products-con-slider,
+.event-list,
+.event-swiper figure:hover,
+.news-list,
+.news-swiper figure:hover {
+  cursor: url("../../img/cursor.svg") 2 2, auto;
+}
 
+/* ------------ 슬라이드01 - 이미지(세로형) ------------ */
 .products {
   overflow: hidden;
 }
@@ -9,7 +17,7 @@
 .slider-products-wrap {
   margin-top: var(--margin-xl);
   display: flex;
-  gap: 2rem;
+  gap: var(--gap-m);
 }
 
 .products-txt-slider {
@@ -41,7 +49,7 @@
 }
 
 .products-text-card h3 {
-  font-size: clamp(5rem, 5vw, 9rem); /* 여기 어떻게 할지 고민 */
+  font-size: clamp(5rem, 5vw, 9rem);
   line-height: 1.1;
   font-weight: 700;
   color: var(--title-color);
@@ -64,7 +72,7 @@
   width: 100%;
   max-width: 42.7rem;
   aspect-ratio: 1/1.2272;
-  border-radius: 10px;
+  border-radius: var(--card-radius);
   overflow: hidden;
   word-break: keep-all;
 }
@@ -130,7 +138,6 @@
 }
 
 /* ------------ 슬라이드02 - 이미지(정사각형) ------------ */
-
 .preview {
   margin-top: var(--margin-xl);
 }
@@ -146,7 +153,7 @@
 .preview-swiper figure {
   width: 100%;
   aspect-ratio: 1/1.09259;
-  border-radius: 10px;
+  border-radius: var(--card-radius);
   overflow: hidden;
   position: relative;
   box-shadow: 5px 6px 11px rgba(0, 0, 0, 0.25);
@@ -169,21 +176,8 @@
 }
 
 /* ------------ 슬라이드03 - 이미지(정사각형) ------------ */
-
 .review {
   margin-top: var(--margin-xl);
-}
-
-.review-slider-wrap {
-  width: 100%;
-}
-
-.review-slider {
-  width: 100%;
-}
-
-.review .swiper-wrapper {
-  width: 100%;
 }
 
 .review-slider {
@@ -192,7 +186,7 @@
 
 .review-item {
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: var(--card-radius);
   overflow: hidden;
   position: relative;
 }
@@ -221,14 +215,13 @@
   transform: translate(-50%, -40%);
   transition: var(--trans-speed-nomal);
   font-size: var(--font-x);
-  color: var(--white100);
-  font-weight: 500;
   line-height: 1.2;
   text-align: center;
   word-break: keep-all;
   padding: 0 1rem;
   z-index: 1;
   opacity: 0;
+  color: var(--white100);
 }
 
 .review-item:hover strong {
@@ -236,7 +229,8 @@
 }
 
 .review-item strong b {
-  font-weight: 700;
+  color: var(--white70);
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -252,7 +246,7 @@
   width: 4rem;
   height: 2rem;
   border: none;
-  background: url(../img/arrow-b-right.png) no-repeat 50%;
+  background: url(../../img/arrow-b-right.png) no-repeat 50%;
   cursor: pointer;
 }
 

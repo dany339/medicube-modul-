@@ -1,0 +1,98 @@
+@charset 'utf-8';
+
+/* ------------ 목록02 ------------ */
+.check {
+  margin-top: var(--margin-xl);
+}
+
+.check-list {
+  margin: var(--margin-l) 0;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-l);
+  flex-shrink: 0;
+  overflow-x: auto;
+}
+
+.check-list li {
+  width: 36.9rem;
+  min-width: 33.5rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--circle-radius);
+  padding: 0 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: no-repeat 50% / cover;
+  position: relative;
+  cursor: pointer;
+  word-break: keep-all;
+  box-shadow: 0px 0px 30px rgba(200, 0, 47, 0.25);
+}
+
+.check-list li:nth-child(1) {
+  background-image: url(https://themedicube.co.kr/web/upload/event/ebottle_s1.png);
+}
+.check-list li:nth-child(2) {
+  background-image: url(https://themedicube.co.kr/web/upload/event/ebottle_s2.png);
+}
+.check-list li:nth-child(3) {
+  background-image: url(https://themedicube.co.kr/web/upload/event/ebottle_s3.png);
+}
+.check-list li:nth-child(4) {
+  background-image: url(https://themedicube.co.kr/web/upload/event/ebottle_img_21.png);
+}
+
+.check-list li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--trans-speed-nomal);
+  background: var(--black10);
+}
+
+.check-list li:hover::after {
+  content: "";
+  background: var(--main-color);
+}
+
+.check-list li dl {
+  position: relative;
+  z-index: 1;
+}
+
+.check-list li dt {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--white100);
+  transition: var(--trans-speed-nomal);
+  transform: translateY(110%);
+}
+
+.check-list li:hover dt {
+  color: var(--white100);
+  transform: translateY(0);
+}
+
+.check-list li dd {
+  margin-top: var(--margin-xs);
+  transform: translateY(350%);
+  color: var(--white70);
+  transition: var(--trans-speed-nomal);
+}
+
+.check-list li:hover dd {
+  transform: translateY(0);
+}
+
+@media (max-width: 1800px) {
+  .check-list {
+    justify-content: flex-start;
+  }
+}

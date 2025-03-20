@@ -1,0 +1,12 @@
+@charset 'utf-8';
+
+/* ------------ 목록01 - 1 ------------ */
+.list-item {
+  flex-direction: column;
+}
+
+@media (max-width: 425px) {
+  .list-item li {
+    flex-direction: column;
+  }
+}

@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 /* ------------ 소식 목록 ------------ */
-
 .sns {
   margin-top: var(--margin-xl);
 }
@@ -12,27 +11,28 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: var(--gap-m);
 }
 
 .sns-item {
-  width: 49%;
+  width: 46%;
   margin-top: 3.125vw; /* var(--margin-l) */
 }
 
 .sns-item figure {
   width: 100%;
   aspect-ratio: 1/0.3094;
-  border-radius: 10px;
+  border-radius: var(--card-radius);
   overflow: hidden;
 }
 
 .sns-item:hover figure img {
-  transform: scale(110%);
+  transform: var(--scale-img);
 }
 
 .sns-txt p {
   margin-top: var(--margin-xs);
+  padding-left: 1rem;
   /* font-size: var(--font-m); */
   font-size: clamp(1.6rem, 3.5vw, 2rem);
   font-weight: 700;
@@ -43,6 +43,10 @@
   .sns-item {
     width: 70%;
     text-align: center;
+  }
+
+  .sns-txt p {
+    padding: 0;
   }
 }
 
