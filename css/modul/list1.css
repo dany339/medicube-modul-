@@ -41,7 +41,7 @@
 
 .list-txt strong {
   font-size: var(--font-l);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--main-color);
 }
 

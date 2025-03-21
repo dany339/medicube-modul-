@@ -69,7 +69,7 @@
 
 .check-list li dt {
   font-size: var(--font-xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--white100);
   transition: var(--trans-speed-nomal);
   transform: translateY(110%);

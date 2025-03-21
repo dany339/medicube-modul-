@@ -63,7 +63,7 @@
   height: 3.5rem;
   border-radius: var(--circle-radius);
   font-size: var(--font-l);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--white100);
   background: var(--main-color);
   aspect-ratio: 1/1;
@@ -79,7 +79,7 @@
 
 .faq-txt h4 {
   font-size: var(--font-xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--title-color);
   padding-right: 1rem;
   word-break: keep-all;

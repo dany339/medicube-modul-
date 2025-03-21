@@ -8,7 +8,7 @@
 
 .map strong {
   font-size: var(--font-m);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--title-color);
 }
 
@@ -40,18 +40,18 @@
 .map-wrap .map-search .btn-fold {
   content: "";
   position: absolute;
-  top: 42%;
+  top: 50%;
   right: 64rem;
   width: 4rem;
   height: 13.6rem;
   background: var(--white100) url(../../img/arrow-m-right.png) no-repeat 50%;
   border-radius: var(--btn-radius);
+  transform: translate(0, -50%);
   cursor: pointer;
 }
 
 .map-wrap .map-search.on .btn-fold {
-  /* background-image: url(../../img/arrow-m-left.png); */
-  transform: scale(-1);
+  transform: translate(0, -50%) scale(-1);
 }
 
 .map-info > li {
@@ -63,7 +63,7 @@
 }
 
 .map-info > li dt {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--title-color);
 }
 
@@ -109,14 +109,13 @@ footer {
   }
 
   .map-wrap .map-search .btn-fold {
-    top: -3rem;
-    right: 47%;
-    height: 11rem;
-    transform: rotate(90deg);
+    top: -4.3rem;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(90deg);
   }
 
   .map-wrap .map-search.on .btn-fold {
-    transform: scale(-1) rotate(90deg);
+    transform: translate(-50%, 0) rotate(-90deg);
   }
 
   footer {

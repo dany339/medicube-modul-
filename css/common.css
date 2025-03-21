@@ -17,14 +17,19 @@
   --black10: rgba(0, 0, 0, 0.1);
 
   /* font */
-  --font-header-footer: clamp(1.6rem, 0.99vw, 1.8rem);
-  --font-visual-title: clamp(5rem, 12.1146vw, 13.5rem);
-  --font-visual-text: clamp(2rem, 3vw, 3rem);
+  --font-header-footer: clamp(1.6rem, 1vw, 1.8rem);
+  --font-visual-title: clamp(5rem, 11vw, 13.5rem);
+  --font-visual-text: clamp(2rem, 2.7vw, 3rem);
   --font-sec-title: clamp(3.2rem, 2.7083vw, 5.2rem);
   --font-xl: clamp(2.3rem, 3vw, 3rem);
   --font-l: clamp(2rem, 1.1458vw, 2.2rem);
   --font-m: clamp(1.8rem, 1.5vw, 2rem);
   --font-s: clamp(1.7rem, 2vw, 1.8rem);
+
+  /* font weight */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
 
   /* margin */
   --margin-xl: 12rem;
@@ -32,6 +37,7 @@
   --margin-m: 4rem;
   --margin-s: 3rem;
   --margin-xs: 2rem;
+  --margin-xxs: 1rem;
 
   /* gap */
   --gap-l: 4rem;
@@ -75,7 +81,7 @@ a {
   text-decoration: none;
   color: inherit;
   font-size: var(--font-s);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--main-color);
 }
 
@@ -150,13 +156,14 @@ main {
 
 .visual-title h2 {
   font: var(--font-visual-title) / 1.2 "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .visual-title p {
-  width: 40%;
+  width: 45%;
   font-size: var(--font-visual-text);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
   margin: 0 auto;
   word-break: keep-all;
 }
@@ -184,6 +191,12 @@ main {
   font-size: var(--font-s);
 }
 
+@media (max-width: 1440px) {
+  .visual-title p {
+    width: 60%;
+  }
+}
+
 @media (max-width: 1024px) {
   .visual-title p {
     width: 80%;
@@ -191,28 +204,24 @@ main {
 }
 
 /* ------------ sec-title  ------------ */
-.sec-title {
-  font-weight: 700;
-  line-height: 1.5;
-  color: var(--title-color);
-}
-
 .sec-title strong {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
   font-size: var(--font-m);
   color: var(--main-color);
 }
 
 .sec-title h3 {
+  font-weight: var(--font-weight-bold);
+  color: var(--title-color);
   font-size: var(--font-sec-title);
-  margin-top: 1rem;
+  margin-top: var(--margin-xxs);
   line-height: 1.2;
   word-break: keep-all;
 }
 
 .sec-title p {
-  font-weight: 400;
   margin-top: var(--margin-s);
-
   width: 50%;
   word-break: keep-all;
   color: var(--text-color);

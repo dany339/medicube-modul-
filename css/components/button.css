@@ -25,7 +25,7 @@
   width: 2.4rem;
   aspect-ratio: 1/1;
   background: url(../../img/arrow-m-right.png) no-repeat 50%;
-  margin-left: 1rem;
+  margin-left: var(--margin-xxs);
   transition: var(--trans-speed-fast);
 }
 
@@ -40,9 +40,9 @@
   height: 100%;
   background: var(--main-color);
   border-radius: var(--circle-radius);
-  z-index: -1;
   top: 100%;
   transition: 0.35s;
+  z-index: -1;
 }
 
 .btn-more-con .btn-more-item:nth-child(1) {
@@ -86,7 +86,7 @@
   width: 2.4rem;
   height: 2.4rem;
   background: url(../../img/arrow-m-right.png) no-repeat 50% 50%;
-  margin-left: 1rem;
+  margin-left: var(--margin-xxs);
 }
 
 @media (max-width: 425px) {
@@ -128,4 +128,19 @@
   opacity: 1;
   bottom: 22.7rem;
   transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .btn-talk,
+  .btn-top {
+    width: 4.4rem;
+  }
+
+  .btn-talk.active {
+    bottom: 25.5rem;
+  }
+
+  .btn-top.active {
+    bottom: 18.7rem;
+  }
 }

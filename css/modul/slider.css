@@ -42,7 +42,7 @@
 }
 
 .products-text-card strong {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-m);
   color: var(--main-color);
   margin-top: var(--margin-xs);
@@ -51,7 +51,7 @@
 .products-text-card h3 {
   font-size: clamp(5rem, 5vw, 9rem);
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--title-color);
   word-break: keep-all;
   margin-top: var(--margin-s);
@@ -92,7 +92,7 @@
   height: 10.2rem;
   background: var(--main-color70);
   color: var(--white100);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   display: flex;
   align-items: center;
   padding: 2rem 3rem;
@@ -230,7 +230,7 @@
 
 .review-item strong b {
   color: var(--white70);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   line-height: 1.5;
 }
 
