@@ -134,6 +134,11 @@
   .btn-talk,
   .btn-top {
     width: 4.4rem;
+    bottom: 23.5rem;
+  }
+
+  .btn-top {
+    bottom: 16.7rem;
   }
 
   .btn-talk.active {

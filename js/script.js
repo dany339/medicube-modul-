@@ -184,6 +184,11 @@ $productsTab.on("mousedown", function (e) {
   scrollLeft = $(this).scrollLeft();
 });
 
+$productsTab.on("mouseleave", function () {
+  isDown = false;
+  $(this).removeClass("active");
+});
+
 $productsTab.on("mouseup", function () {
   isDown = false;
   $(this).removeClass("active");
@@ -226,6 +231,11 @@ $faqTab.on("mousedown", function (e) {
   $(this).addClass("active");
   startX = e.pageX - $(this).offset().left;
   scrollLeft = $(this).scrollLeft();
+});
+
+$faqTab.on("mouseleave", function () {
+  isDown = false;
+  $(this).removeClass("active");
 });
 
 $faqTab.on("mouseup", function () {
@@ -295,6 +305,11 @@ $checkList.on("mousedown", function (e) {
   $(this).addClass("active");
   startX = e.pageX - $(this).offset().left;
   scrollLeft = $(this).scrollLeft();
+});
+
+$checkList.on("mouseleave", function () {
+  isDown = false;
+  $(this).removeClass("active");
 });
 
 $checkList.on("mouseup", function () {

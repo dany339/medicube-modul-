@@ -2,10 +2,8 @@
 
 /* ------------cursor------------ */
 .products-con-slider,
-.event-list,
-.event-swiper figure:hover,
-.news-list,
-.news-swiper figure:hover {
+.preview-list,
+.preview-swiper figure {
   cursor: url("../../img/cursor.svg") 2 2, auto;
 }
 
