@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  font-size: var(--font-xl);
+  font-size: var(--font-l);
   font-weight: var(--font-weight-bold);
   gap: var(--gap-m);
   margin-top: var(--margin-l);

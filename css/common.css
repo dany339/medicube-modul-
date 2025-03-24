@@ -18,12 +18,12 @@
 
   /* font */
   --font-header-footer: clamp(1.6rem, 1vw, 1.8rem);
-  --font-visual-title: clamp(5rem, 11vw, 13.5rem);
+  --font-visual-title: clamp(5rem, 17vw, 13.5rem);
   --font-visual-text: clamp(2rem, 2.7vw, 3rem);
-  --font-sec-title: clamp(3.2rem, 2.7083vw, 5.2rem);
-  --font-xl: clamp(2.3rem, 3vw, 3rem);
+  --font-sec-title: clamp(3.2rem, 3.5vw, 4.2rem);
+  --font-xl: clamp(2.5rem, 3.5vw, 2.8rem);
   --font-l: clamp(2rem, 1.1458vw, 2.2rem);
-  --font-m: clamp(1.8rem, 1.5vw, 2rem);
+  --font-m: clamp(1.8rem, 1.7vw, 2rem);
   --font-s: clamp(1.7rem, 2vw, 1.8rem);
 
   /* font weight */
@@ -59,8 +59,8 @@
 
   /* size */
   --size-ico-sns: 3rem;
-  --size-logo-height: 3.2rem;
-  --size-logo-width: 15rem;
+  --size-logo-height: 3.4rem;
+  --size-logo-width: 16rem;
 }
 
 ::selection {
@@ -225,6 +225,7 @@ main {
   width: 50%;
   word-break: keep-all;
   color: var(--text-color);
+  font-size: var(--font-m);
 }
 
 @media (max-width: 1024px) {

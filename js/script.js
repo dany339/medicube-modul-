@@ -1,3 +1,6 @@
+/* 모바일에서 hover 효과 대체 ---------------------------------------------- */
+document.addEventListener("touchstart", function () {}, true);
+
 /* 헤더 - gnb ---------------------------------------------- */
 const $header = $("header");
 const $menu = $(".gnb > li");

@@ -7,9 +7,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: var(--main-color10);
+  background: #f8f8f8;
   border-radius: var(--card-radius);
-  padding: 3.4rem 3rem;
   word-break: keep-all;
 }
 

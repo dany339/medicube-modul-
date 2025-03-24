@@ -99,7 +99,7 @@
 .btn-talk,
 .btn-top {
   position: fixed;
-  bottom: 28.5rem;
+  bottom: 15.5rem;
   right: 5.7292vw;
   width: 5.4rem;
   aspect-ratio: 1/1;
@@ -114,19 +114,19 @@
 }
 
 .btn-top {
-  bottom: 20.7rem;
+  bottom: 7.7rem;
   background: var(--main-color) url(../../img/ico-top.svg) no-repeat 50% / 50%;
 }
 
 .btn-talk.active {
   opacity: 1;
-  bottom: 30.5rem;
+  bottom: 17.5rem;
   transform: translateY(0);
 }
 
 .btn-top.active {
   opacity: 1;
-  bottom: 22.7rem;
+  bottom: 9.7rem;
   transform: translateY(0);
 }
 
@@ -134,18 +134,18 @@
   .btn-talk,
   .btn-top {
     width: 4.4rem;
-    bottom: 23.5rem;
+    bottom: 10.5rem;
   }
 
   .btn-top {
-    bottom: 16.7rem;
+    bottom: 3.7rem;
   }
 
   .btn-talk.active {
-    bottom: 25.5rem;
+    bottom: 12rem;
   }
 
   .btn-top.active {
-    bottom: 18.7rem;
+    bottom: 5.7rem;
   }
 }

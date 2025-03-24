@@ -9,6 +9,11 @@
 .point-con {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+}
+
+.point-txt {
+  align-self: flex-start;
 }
 
 .point-con p {
@@ -43,10 +48,11 @@
 
 .point-pic {
   width: 30.2083vw;
-  max-width: 58rem;
-  min-width: 34.5rem;
+  max-width: 54rem;
+  min-width: 36.5rem;
   aspect-ratio: 1/0.931;
   overflow: hidden;
+  align-self: flex-end;
 }
 
 .point-pic img {
@@ -54,7 +60,6 @@
 }
 
 footer {
-  /*  footer와 point-pic의 간격 조정을 위해 footer의 마진을 0으로 재부여 */
   margin-top: 0;
 }
 
