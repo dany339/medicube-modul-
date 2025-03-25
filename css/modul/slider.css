@@ -41,13 +41,13 @@
 
 .products-text-card strong {
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-m);
+  font-size: var(--font-l);
   color: var(--main-color);
   margin-top: var(--margin-xs);
 }
 
 .products-text-card h3 {
-  font-size: clamp(5rem, 5vw, 9rem);
+  font-size: clamp(4rem, 5.5vw, 9rem);
   line-height: 1.1;
   font-weight: var(--font-weight-bold);
   color: var(--title-color);
@@ -112,6 +112,7 @@
 
   .products-text-card {
     text-align: center;
+    padding: 0;
   }
 
   .products-text-card p {
@@ -127,11 +128,9 @@
     width: 100%;
     height: auto;
   }
-}
 
-@media (max-width: 425px) {
   .products-card {
-    width: 100%;
+    max-width: 38rem;
   }
 }
 
@@ -212,11 +211,11 @@
   width: 100%;
   transform: translate(-50%, -40%);
   transition: var(--trans-speed-nomal);
-  font-size: var(--font-x);
+  font-size: var(--font-m);
   line-height: 1.2;
   text-align: center;
   word-break: keep-all;
-  padding: 0 1rem;
+  padding: 0 1.3rem;
   z-index: 1;
   opacity: 0;
   color: var(--white100);
@@ -227,8 +226,8 @@
 }
 
 .review-item strong b {
-  color: var(--white70);
   font-weight: var(--font-weight-semibold);
+  color: var(--white70);
   line-height: 1.5;
 }
 

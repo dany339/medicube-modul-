@@ -17,14 +17,13 @@
   --black10: rgba(0, 0, 0, 0.1);
 
   /* font */
-  --font-header-footer: clamp(1.6rem, 1vw, 1.8rem);
-  --font-visual-title: clamp(5rem, 17vw, 13.5rem);
-  --font-visual-text: clamp(2rem, 2.7vw, 3rem);
-  --font-sec-title: clamp(3.2rem, 3.5vw, 4.2rem);
-  --font-xl: clamp(2.5rem, 3.5vw, 2.8rem);
-  --font-l: clamp(2rem, 1.1458vw, 2.2rem);
+  --font-visual-title: clamp(5rem, 12vw, 13.5rem);
+  --font-visual-text: clamp(2rem, 2.4vw, 3rem);
+  --font-sec-title: clamp(2.8rem, 3.3vw, 4.2rem);
+  --font-xl: clamp(2.5rem, 3.5vw, 2.6rem);
+  --font-l: clamp(1.9rem, 2vw, 2.2rem);
   --font-m: clamp(1.8rem, 1.7vw, 2rem);
-  --font-s: clamp(1.7rem, 2vw, 1.8rem);
+  --font-s: clamp(1.6rem, 2vw, 1.8rem);
 
   /* font weight */
   --font-weight-bold: 700;
@@ -207,7 +206,7 @@ main {
 .sec-title strong {
   font-weight: var(--font-weight-bold);
   line-height: 1.5;
-  font-size: var(--font-m);
+  font-size: var(--font-l);
   color: var(--main-color);
 }
 
@@ -229,6 +228,11 @@ main {
 }
 
 @media (max-width: 1024px) {
+  .sec-title p {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
   .sec-title p {
     width: 100%;
   }

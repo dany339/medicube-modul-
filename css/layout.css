@@ -50,7 +50,7 @@ nav {
   display: flex;
   gap: var(--gap-xs);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-header-footer);
+  font-size: var(--font-s);
   color: var(--title-color);
 }
 
@@ -94,7 +94,7 @@ nav {
 }
 
 .submenu li a {
-  font-size: var(--font-header-footer);
+  font-size: var(--font-s);
   font-weight: var(--font-weight-medium);
   word-break: keep-all;
   display: block;
@@ -233,6 +233,10 @@ nav {
   color: var(--main-color);
 }
 
+.mobile-menu .sns-ico-list {
+  margin-top: var(--margin-s);
+}
+
 @media (max-width: 1024px) {
   nav {
     margin: 0;
@@ -248,10 +252,6 @@ nav {
 
   .btn-menu {
     display: block;
-  }
-
-  .mobile-menu .sns-ico-list {
-    margin-top: var(--margin-s);
   }
 }
 
@@ -302,8 +302,8 @@ footer {
 }
 
 .foot-info a {
-  font-size: var(--font-header-footer);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-s);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-color);
 }
 
@@ -315,7 +315,7 @@ footer {
 }
 
 .foot-con address p {
-  font-size: var(--font-header-footer);
+  font-size: var(--font-s);
   color: var(--text-color);
   margin-top: var(--margin-s);
   word-break: keep-all;

@@ -32,30 +32,13 @@
   background: var(--main-color10);
 }
 
-.info-wrap li::after {
-  content: "";
-  position: absolute;
-  top: 2.8rem;
-  right: 2%;
-  width: 4rem;
-  aspect-ratio: 1/1;
-  background: url(../../img/arrow-m-right.png) no-repeat 50%;
-  transform: rotate(90deg);
-  transition: var(--trans-speed-nomal);
-}
-
-.info-wrap li.on::after {
-  rotate: -180deg;
-}
-
-.faq-title {
+.info-wrap li .faq-title {
   display: flex;
-  gap: var(--gap-s);
-  align-items: center;
+  justify-content: space-between;
 }
 
-.faq-title i,
-.answer-wrap i {
+.info-wrap li .faq-title i,
+.info-wrap li .answer-wrap i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,34 +52,47 @@
   aspect-ratio: 1/1;
 }
 
-.answer-wrap i {
+.info-wrap li .answer-wrap i {
   background: var(--black10);
 }
 
-.faq-txt {
-  width: 80%;
+.info-wrap li .faq-txt {
+  display: flex;
+  gap: var(--gap-s);
+  align-items: center;
 }
 
-.faq-txt h4 {
+.info-wrap li .faq-txt h4 {
   font-size: var(--font-l);
   font-weight: var(--font-weight-bold);
   color: var(--title-color);
-  padding-right: 1rem;
   word-break: keep-all;
 }
 
-.answer-wrap {
+.info-wrap li span {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  transform: rotate(90deg);
+  transition: var(--trans-speed-nomal);
+  background: url(../../img/arrow-m-right.png) no-repeat 50%;
+}
+
+.info-wrap li.on span {
+  transform: rotate(-90deg);
+}
+
+.info-wrap li .answer-wrap {
   margin-top: var(--margin-s);
   display: none;
   word-break: keep-all;
 }
 
-.answer-con {
+.info-wrap li .answer-con {
   display: flex;
   gap: var(--gap-m);
 }
 
-.answer-con p {
+.info-wrap li .answer-con p {
   font-size: var(--font-m);
 }
 
@@ -105,13 +101,13 @@
     padding: 3rem 2rem;
   }
 
-  .faq-title i {
+  .info-wrap li .faq-title i {
     width: 3rem;
     height: 3rem;
   }
 
   /* 'A' 아이콘 넣을지 말지 고민. 공간을 많이 차지해서 답변이 보기 불편하게 떨어짐 */
-  .answer-wrap i {
+  .info-wrap li .answer-wrap i {
     display: none;
   }
 }

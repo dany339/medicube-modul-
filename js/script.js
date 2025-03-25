@@ -108,7 +108,7 @@ if ($(".products-con-slider").length) {
 if ($(".preview-swiper").length) {
   const $previewSwiper = new Swiper(".preview-swiper", {
     loop: true,
-    slidesPerView: "1",
+    slidesPerView: "1.2",
     spaceBetween: 20,
     autoplay: {
       delay: 1000,
@@ -134,7 +134,7 @@ if ($(".preview-swiper").length) {
 /* 슬라이드03 ---------------------------------------------- */
 if ($(".review-slider").length) {
   const reviewSwiper = new Swiper(".review-slider", {
-    slidesPerView: 1,
+    slidesPerView: 1.2,
     spaceBetween: 20,
     loop: true,
     autoplay: {
@@ -356,7 +356,7 @@ AOS.init();
 const btnTop = document.querySelector(".btn-top");
 const btnTalk = document.querySelector(".btn-talk");
 const html = document.documentElement;
-const htmlPos = html.scrollHeight / 2;
+const htmlPos = html.scrollHeight / 2.5;
 
 $(".btn-top").click(function () {
   $("html, body").animate({ scrollTop: 0 }, 400);

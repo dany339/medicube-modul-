@@ -24,11 +24,9 @@
 }
 
 .list-item li figure {
-  max-width: 9.3rem;
-  min-width: 9.3rem;
   width: 9.3rem;
+  min-width: 8.3rem;
   aspect-ratio: 1/1;
-  background: var(--white100);
   border-radius: var(--circle-radius);
   overflow: hidden;
 }
@@ -46,6 +44,12 @@
 
 .list-txt p {
   font-size: var(--font-m);
+}
+
+@media (max-width: 1440px) {
+  .list-item {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 425px) {

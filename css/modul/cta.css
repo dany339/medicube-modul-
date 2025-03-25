@@ -64,6 +64,10 @@ footer {
 }
 
 @media (max-width: 825px) {
+  .point-con .btn-more {
+    margin-bottom: var(--margin-xl);
+  }
+
   .point-pic {
     display: none;
   }

@@ -68,7 +68,7 @@
 }
 
 .map-info > li dd {
-  font-size: var(--font-s);
+  font-size: var(--font-m);
   word-break: keep-all;
 }
 

@@ -6,7 +6,7 @@
   padding: 6rem 0 14.2rem 0;
 }
 
-.vison-title {
+.vision-title {
   margin-top: var(--margin-l);
   text-align: center;
   position: relative;
@@ -17,21 +17,27 @@
   font-weight: var(--font-weight-medium);
 }
 
-.vison-title h4 {
+.vision-title h4 {
   font: 8.2rem/1.1 "Poppins", sans-serif;
   font-size: clamp(4.5rem, 7.5vw, 8.2rem);
   font-weight: var(--font-weight-bold);
   color: var(--main-color);
 }
 
-.vison-title p {
+.vision-title p {
   margin: var(--margin-s) auto 0 auto;
   width: 50%;
   word-break: keep-all;
 }
 
+@media (max-width: 1440px) {
+  .vision-title p {
+    width: 70%;
+  }
+}
+
 @media (max-width: 768px) {
-  .vison-title p {
-    width: 86%;
+  .vision-title p {
+    width: 90%;
   }
 }

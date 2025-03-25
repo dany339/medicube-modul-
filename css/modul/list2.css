@@ -17,7 +17,7 @@
 
 .check-list li {
   width: 36.9rem;
-  min-width: 33.5rem;
+  min-width: 29.5rem;
   aspect-ratio: 1/1;
   border-radius: var(--circle-radius);
   padding: 0 5rem;

@@ -15,7 +15,7 @@
 }
 
 .sns-item {
-  width: 46%;
+  width: 44%;
   margin-top: 3.125vw; /* var(--margin-l) */
 }
 
@@ -34,7 +34,7 @@
   margin-top: var(--margin-xs);
   padding-left: 1rem;
   /* font-size: var(--font-m); */
-  font-size: clamp(1.6rem, 3.5vw, 2rem);
+  font-size: clamp(1.7rem, 3.5vw, 2rem);
   font-weight: var(--font-weight-bold);
   color: var(--title-color);
 }

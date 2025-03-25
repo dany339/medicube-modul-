@@ -14,8 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 11rem;
-  min-width: 9.6rem;
+  width: 10.5rem;
+  min-width: 9.5rem;
   aspect-ratio: 1/1;
   font-size: var(--font-s);
   font-weight: var(--font-weight-bold);
@@ -44,6 +44,7 @@
 }
 
 /* ------------ 질문 목록 - tab ------------ */
+
 .faq-tab {
   display: flex;
   flex-direction: row;
